@@ -6,10 +6,12 @@
 		<div>
 			<h1>Ely's blog</h1>
 		</div>
-		<div>
-			<p>published: 14.06.2014, 12:14</p>
-			<h2>My first post!</h2>
-			<p>Hello! Hello! This is my first post!</p>
-		</div>
+		{% for post in posts%}
+			<div>
+				<p>published: {{ post.published_date }}</p>
+				<h1><a href="">{{ post.title }}</a></h1>
+				<p>{{ post.text|linebreaks }}</p>
+			</div>
+		{% endfor %}
 	</body>
 </html>
