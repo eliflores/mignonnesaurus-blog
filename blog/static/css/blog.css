@@ -1,6 +1,6 @@
 h1 a {
 	color:#FCA205;
-	font-family: 'Lobster';
+	font-family: 'Rockwell';
 }
 
 body {
@@ -8,7 +8,7 @@ body {
 }
 
 .page-header {
-	background-color: #FF9400;
+	background-color: #AABBBB;
 	margin-top: 0;
 	padding: 20px 20px 20px 40px;
 }
@@ -24,7 +24,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Rockwell';
 }
 
 .date {
