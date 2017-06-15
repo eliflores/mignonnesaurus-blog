@@ -25,7 +25,9 @@ SECRET_KEY = '(ys(b=s=^5(u$hl8^))h_h3j^r*mg+t#vw%7c*zb6z-&hq-=8-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'elifloresch.pythonanywhere.com'
+]
 
 
 # Application definition
