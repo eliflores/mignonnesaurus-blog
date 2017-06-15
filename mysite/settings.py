@@ -26,6 +26,7 @@ SECRET_KEY = '(ys(b=s=^5(u$hl8^))h_h3j^r*mg+t#vw%7c*zb6z-&hq-=8-'
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    '127.0.0.1',
     'elifloresch.pythonanywhere.com'
 ]
 
