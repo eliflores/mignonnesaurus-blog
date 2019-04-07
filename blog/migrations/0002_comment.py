@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('text', models.TextField()),
                 ('created_date', models.DateTimeField(default=django.utils.timezone.now)),
                 ('approved', models.BooleanField(default=False)),
-                ('post', models.ForeignKey(to='blog.Post', related_name='comments')),
+                ('post', models.ForeignKey(to='blog.Post', related_name='comments', on_delete=models.CASCADE)),
             ],
         ),
     ]
