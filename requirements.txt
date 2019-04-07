@@ -7,6 +7,7 @@ gunicorn==19.9.0
 idna==2.6
 pbr==4.0.3
 psycopg2==2.7.2
+python-dotenv==0.10.1
 pythonanywhere==0.0.12
 pytz==2018.4
 requests==2.18.4
@@ -18,4 +19,4 @@ virtualenv==16.0.0
 virtualenv-clone==0.3.0
 virtualenvwrapper==4.8.2
 whitenoise==4.1.2
-psycopg2==2.7.2
+django-configurations==2.1
