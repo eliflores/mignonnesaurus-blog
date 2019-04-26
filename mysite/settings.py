@@ -112,6 +112,18 @@ class Dev(Base):
     ]
 
 
+class Staging(Base):
+    DEBUG = True
+
+    DATABASES = {'default': dj_database_url.config(conn_max_age=500)}
+
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+    ALLOWED_HOSTS = [
+        'mignonnesaurus-staging.herokuapp.com'
+    ]
+
+
 class Prod(Base):
     DEBUG = False
 
