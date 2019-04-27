@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 import dj_database_url
 from configurations import Configuration
@@ -23,6 +22,7 @@ class Base(Configuration):
     SECRET_KEY = '(ys(b=s=^5(u$hl8^))h_h3j^r*mg+t#vw%7c*zb6z-&hq-=8-'
 
     INSTALLED_APPS = (
+        'whitenoise.runserver_nostatic',
         'django.contrib.admin',
         'django.contrib.auth',
         'django.contrib.contenttypes',
@@ -83,11 +83,7 @@ class Base(Configuration):
 
     WSGI_APPLICATION = 'mysite.wsgi.application'
 
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
     LOGIN_REDIRECT_URL = '/'
-
-    STATIC_URL = '/static/'
-
     ROOT_URLCONF = 'mysite.urls'
 
 
@@ -111,17 +107,23 @@ class Dev(Base):
         '127.0.0.1'
     ]
 
+    STATIC_URL = '/static/'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 
 class Staging(Base):
-    DEBUG = True
+    DEBUG = False
 
     DATABASES = {'default': dj_database_url.config(conn_max_age=500)}
-
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
     ALLOWED_HOSTS = [
         'mignonnesaurus-staging.herokuapp.com'
     ]
+
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+    STATIC_URL = '/app/static/'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
 class Prod(Base):
@@ -129,9 +131,12 @@ class Prod(Base):
 
     DATABASES = {'default': dj_database_url.config(conn_max_age=500)}
 
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
     ALLOWED_HOSTS = [
         'elifloresch.pythonanywhere.com',
         'mignonnesaurus.herokuapp.com'
     ]
+
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+    STATIC_URL = '/app/static/'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
