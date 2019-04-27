@@ -83,10 +83,11 @@ class Base(Configuration):
 
     WSGI_APPLICATION = 'mysite.wsgi.application'
 
-    STATIC_URL = '/static/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
     LOGIN_REDIRECT_URL = '/'
+
+    STATIC_URL = '/static/'
+
     ROOT_URLCONF = 'mysite.urls'
 
 
