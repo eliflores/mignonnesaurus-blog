@@ -112,7 +112,7 @@ class Dev(Base):
 
 
 class Staging(Base):
-    DEBUG = False
+    DEBUG = True
 
     DATABASES = {'default': dj_database_url.config(conn_max_age=500)}
 
@@ -127,7 +127,7 @@ class Staging(Base):
 
 
 class Prod(Base):
-    DEBUG = False
+    DEBUG = True
 
     DATABASES = {'default': dj_database_url.config(conn_max_age=500)}
 
