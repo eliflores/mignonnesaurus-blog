@@ -104,7 +104,7 @@ class Dev(Base):
     }
 
     ALLOWED_HOSTS = [
-        '127.0.0.1'
+        '127.0.0.1',
     ]
 
     STATIC_URL = '/static/'
@@ -117,7 +117,7 @@ class Staging(Base):
     DATABASES = {'default': dj_database_url.config(conn_max_age=500)}
 
     ALLOWED_HOSTS = [
-        'mignonnesaurus-staging.herokuapp.com'
+        '.herokuapp.com',
     ]
 
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
@@ -133,7 +133,7 @@ class Prod(Base):
 
     ALLOWED_HOSTS = [
         'elifloresch.pythonanywhere.com',
-        'mignonnesaurus.herokuapp.com'
+        'mignonnesaurus.herokuapp.com',
     ]
 
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
