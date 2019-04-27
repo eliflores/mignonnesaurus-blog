@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 class Base(Configuration):
     # SECURITY WARNING: keep the secret key used in production secret!
-    SECRET_KEY = '(ys(b=s=^5(u$hl8^))h_h3j^r*mg+t#vw%7c*zb6z-&hq-=8-'
+    SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
     INSTALLED_APPS = (
         'whitenoise.runserver_nostatic',
