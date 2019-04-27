@@ -3,4 +3,6 @@ __pycache__
 myvenv
 db.sqlite3
 .DS_Store
-static
+static/admin/
+static/css/
+static/*.json
