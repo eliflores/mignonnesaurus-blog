@@ -111,6 +111,12 @@ class Dev(Base):
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
+class Test(Dev):
+    ALLOWED_HOSTS = [
+        '.herokuapp.com',
+    ]
+
+
 class Staging(Base):
     DEBUG = True
 
