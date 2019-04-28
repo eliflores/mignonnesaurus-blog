@@ -18,7 +18,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 class Base(Configuration):
-    # SECURITY WARNING: keep the secret key used in production secret!
     SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
     INSTALLED_APPS = (
@@ -89,12 +88,6 @@ class Base(Configuration):
 
 class Local(Base):
     DEBUG = True
-
-    MIDDLEWARE = [
-        'django.contrib.sessions.middleware.SessionMiddleware',
-        'django.contrib.auth.middleware.AuthenticationMiddleware',
-        'django.contrib.messages.middleware.MessageMiddleware'
-    ]
 
     DATABASES = {
         'default': {
