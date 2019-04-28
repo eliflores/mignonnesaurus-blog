@@ -19,14 +19,35 @@ python manage.py runserver
 
 ### How to run tests?
 
+#### Test suite
 ```bash
 python runtests.py
+```
+
+#### Single test case(s)
+```bash
+python manage.py test <module_pattern> 
+```
+
+For example, to run all the tests in the `test_models` module:
+
+```bash
+python manage.py test tests.test_models
+```
+
+#### Modify the verbosity level 
+
+You can get more details about the test execution by passing the argument `--verbosity` or `-v`. For the value you can choose from: `0, 1, 2, 3`.
+
+For example, to pass verbosity of 2: 
+```bash
+python manage.py test tests -v 2
 ```
 
 #### Code coverage
 
 ```bash
-coverage run manage.py test -v 2
+coverage run manage.py test tests
 ```
 
 ##### Coverage report
