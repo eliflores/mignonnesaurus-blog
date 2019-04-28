@@ -87,7 +87,7 @@ class Base(Configuration):
     ROOT_URLCONF = 'mysite.urls'
 
 
-class Dev(Base):
+class Local(Base):
     DEBUG = True
 
     MIDDLEWARE = [
@@ -111,13 +111,28 @@ class Dev(Base):
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
-class Staging(Base):
+class Dev(Base):
     DEBUG = True
 
     DATABASES = {'default': dj_database_url.config(conn_max_age=500)}
 
     ALLOWED_HOSTS = [
         '.herokuapp.com',
+    ]
+
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+    STATIC_URL = '/app/static/'
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+class Staging(Base):
+    DEBUG = True
+
+    DATABASES = {'default': dj_database_url.config(conn_max_age=500)}
+
+    ALLOWED_HOSTS = [
+        'mignonnesaurus-staging.herokuapp.com',
     ]
 
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
