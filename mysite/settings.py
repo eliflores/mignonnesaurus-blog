@@ -57,11 +57,6 @@ class Base(Configuration):
 
     USE_TZ = True
 
-    ALLOWED_HOSTS = [
-        '127.0.0.1',
-        '0.0.0.0'
-    ]
-
     MIDDLEWARE_CLASSES = [
         'django.contrib.sessions.middleware.SessionMiddleware',
         'whitenoise.middleware.WhiteNoiseMiddleware',
