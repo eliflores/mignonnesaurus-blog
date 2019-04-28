@@ -110,6 +110,8 @@ class Dev(Base):
 
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+    SECURE_SSL_REDIRECT = True
+
     STATIC_URL = '/app/static/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
@@ -124,6 +126,8 @@ class Staging(Base):
     ]
 
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+    SECURE_SSL_REDIRECT = True
 
     STATIC_URL = '/app/static/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
@@ -140,6 +144,8 @@ class Prod(Base):
     ]
 
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+    SECURE_SSL_REDIRECT = True
 
     STATIC_URL = '/app/static/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
