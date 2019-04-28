@@ -56,6 +56,19 @@ coverage run manage.py test tests
 coverage html -d coverage-report
 ```
 
-### How to deploy?
+### How are changes deployed?
 
-<WIP>
+Deployment is managed with the help of [Heroku](https://heroku.com/) 
+
+There are 3 environments used for testing and deploying the application: 
+
+1. [Dev](https://mignonnesaurus-dev.herokuapp.com/)
+2. [Staging](https://mignonnesaurus-staging.herokuapp.com/)
+3. [Production](https://mignonnesaurus.herokuapp.com/)
+
+After a PR is merged, the change is _automagically_ deployed the  [Dev](https://mignonnesaurus-dev.herokuapp.com/). 
+Once changes are verified in _Dev_, they can be _promoted_ to _staging_ and then to _production_ using the [Heroku Pipelines](https://devcenter.heroku.com/articles/pipelines)
+
+Here is how the UI to promote changes looks like in Heroku: 
+
+![pipeline](https://user-images.githubusercontent.com/615127/56868332-49efd500-69f1-11e9-8c3e-03141452dca0.png)
