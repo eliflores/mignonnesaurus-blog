@@ -19,7 +19,21 @@ python manage.py runserver
 
 ### How to run tests?
 
-<WIP>
+```bash
+python runtests.py
+```
+
+#### Code coverage
+
+```bash
+coverage run manage.py test -v 2
+```
+
+##### Coverage report
+
+```bash
+coverage html -d coverage-report
+```
 
 ### How to deploy?
 
