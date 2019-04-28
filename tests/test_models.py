@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 from freezegun import freeze_time
 
 
-class PostTestCase(TestCase):
+class PostModelTestCase(TestCase):
     def setUp(self):
         user = User.objects.create(username='testuser')
         Post.objects.create(title='Test post', author=user)
