@@ -20,9 +20,14 @@ python manage.py runserver
 ### How to run tests?
 
 #### Test suite
+
+The test suite currently includes _unit_ and _integration_ tests and can be run with:
+
 ```bash
 python runtests.py
 ```
+
+It does not include _E2E_ / _UI_ tests, they can be run separately, see the [E2E Tests](#e2e-tests) section.
 
 #### Single test case(s)
 
@@ -69,7 +74,27 @@ coverage run manage.py test tests
 coverage html -d coverage-report
 ```
 
-### How are changes deployed?
+#### E2E Tests 
+
+#### Pre-requirements
+
+* Install [geckodriver](https://github.com/mozilla/geckodriver) - The [Web Driver](https://developer.mozilla.org/en-US/docs/Web/WebDriver) for Firefox.
+
+```bash
+brew cask install chromedriver
+```
+
+#### Running E2E Tests 
+
+E2E Tests are currently run separately from the main [test suite](#how-to-run-tests) and can be run with:
+
+```bash
+python manage.py test e2e
+```
+
+The options to run single test case(s) are also available as described [here](#single-test-cases).
+
+### How to deploy?
 
 Deployment is managed with the help of [Heroku](https://heroku.com/) 
 
