@@ -25,6 +25,9 @@ python runtests.py
 ```
 
 #### Single test case(s)
+
+You can pass the module or test case:
+
 ```bash
 python manage.py test <module_pattern> 
 ```
@@ -33,6 +36,16 @@ For example, to run all the tests in the `test_models` module:
 
 ```bash
 python manage.py test tests.test_models
+```
+
+And you can also use the `--pattern` or `-p` argument. For example:
+
+```bash
+python manage.py test --pattern="*_forms.py"
+```
+
+```bash
+python manage.py test -p "*_forms.py"
 ```
 
 #### Modify the verbosity level 
