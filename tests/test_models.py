@@ -1,12 +1,12 @@
 from django.test import TestCase
 from blog.models import Post
-from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 from freezegun import freeze_time
 
 
 class PostModelTestCase(TestCase):
     def setUp(self):
-        user = User.objects.create(username='testuser')
+        user = get_user_model().objects.create(username='testuser')
         Post.objects.create(title='Test post', author=user)
 
     def test_published_posts_have_a_published_date(self):
