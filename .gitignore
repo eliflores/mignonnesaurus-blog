@@ -6,3 +6,5 @@ db.sqlite3
 .coverage
 coverage-report
 geckodriver.log
+.scannerwork/
+sonar_scan.sh
