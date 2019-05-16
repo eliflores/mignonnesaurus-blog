@@ -1,8 +1,10 @@
 # My First Blog - Django Girls Tutorial
 
-This is the result of me following the Django Girls Tutorial [here](https://tutorial.djangogirls.org/en/).
-
-## Table of Contents
+This is the result of me following the Django Girls Tutorial [here](https://tutorial.djangogirls.org/en/) and also: 
+* Adding Tests 
+* Adding a setup to run the blog in a staging and production environment in Heroku 
+    * To show an example of a delivery pipeline.
+* Adding SonarQube analysis and fixing issues found by the scanner.
 
 ### How to run the project locally?
 1. Active the virtual env:
@@ -110,3 +112,7 @@ Once changes are verified in _Dev_, they can be _promoted_ to _staging_ and then
 Here is how the UI to promote changes looks like in Heroku: 
 
 ![pipeline](https://user-images.githubusercontent.com/615127/56868332-49efd500-69f1-11e9-8c3e-03141452dca0.png)
+
+### Where can I see the SonarQube measures?
+
+You can see them [here](https://sonarcloud.io/dashboard?id=mignonnesaurus_my-first-blog).
