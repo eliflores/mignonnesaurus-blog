@@ -1,3 +1,6 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=mignonnesaurus_my-first-blog&metric=alert_status)](https://sonarcloud.io/dashboard?id=mignonnesaurus_my-first-blog) 
+
+
 # My First Blog - Django Girls Tutorial
 
 This is the result of me following the Django Girls Tutorial [here](https://tutorial.djangogirls.org/en/) and also: 
@@ -112,7 +115,3 @@ Once changes are verified in _Dev_, they can be _promoted_ to _staging_ and then
 Here is how the UI to promote changes looks like in Heroku: 
 
 ![pipeline](https://user-images.githubusercontent.com/615127/56868332-49efd500-69f1-11e9-8c3e-03141452dca0.png)
-
-### Where can I see the SonarQube measures?
-
-You can see them [here](https://sonarcloud.io/dashboard?id=mignonnesaurus_my-first-blog).
