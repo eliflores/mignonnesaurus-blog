@@ -1,6 +1,6 @@
 h1 a {
 	color:#FCA205;
-	font-family: 'Rockwell';
+    font-family: 'Rockwell', serif;
 }
 
 body {
@@ -24,7 +24,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Rockwell';
+    font-family: 'Rockwell', serif;
 }
 
 .date {
