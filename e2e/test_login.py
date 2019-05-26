@@ -16,7 +16,7 @@ class LoginTest(StaticLiveServerTestCase):
         super().tearDownClass()
 
     def test_admin_can_login(self):
-        get_user_model().objects.create_superuser('admin', 'admin@myawesomesite.com', 'password')
+        get_user_model().objects.create_superuser('admin', 'admin@example.com', 'password')
 
         self.selenium.get('%s%s' % (self.live_server_url, '/admin/'))
         username_input = self.selenium.find_element_by_name('username')
