@@ -86,7 +86,7 @@ coverage html -d coverage-report
 * Install [geckodriver](https://github.com/mozilla/geckodriver) - The [Web Driver](https://developer.mozilla.org/en-US/docs/Web/WebDriver) for Firefox.
 
 ```bash
-brew cask install chromedriver
+brew install geckodriver
 ```
 
 #### Running E2E Tests 
