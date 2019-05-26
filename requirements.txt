@@ -22,5 +22,5 @@ stevedore==1.28.0
 urllib3>=1.24.2
 virtualenv==16.0.0
 virtualenv-clone==0.3.0
-virtualenvwrapper==4.8.2
+virtualenvwrapper==4.8.4
 whitenoise==4.1.2
