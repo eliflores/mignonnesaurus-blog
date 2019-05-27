@@ -83,7 +83,11 @@ coverage html -d coverage-report
 
 #### E2E Tests 
 
-#### Pre-requirements
+:mag_right: It is also possible to run a single E2E test by using the options described [here](#single-test-cases).
+
+#### On a local machine :computer:
+
+##### Pre-requirements
 
 * Install [geckodriver](https://github.com/mozilla/geckodriver) - The [Web Driver](https://developer.mozilla.org/en-US/docs/Web/WebDriver) for Firefox.
 
@@ -91,21 +95,35 @@ coverage html -d coverage-report
 brew install geckodriver
 ```
 
-#### Running E2E Tests 
+##### Running E2E Tests 
 
 E2E Tests are currently run separately from the main [test suite](#how-to-run-tests) and can be run with:
 
 ```bash
-python manage.py test e2e
+python manage.py test e2e.local
 ```
 
-The options to run single test case(s) are also available as described [here](#single-test-cases).
+#### On a remote machine :cloud:
+
+Remote E2E Tests - tests that run _on the cloud_ - are setup to run on [Sauce Labs](https://saucelabs.com/) :zap:.
+
+##### Pre-requirements
+
+* A _username_ and _API Key_ is needed to run the tests on the Sauce Labs Testing Cloud. 
+
+##### Running E2E Tests 
+
+Tests that run on the cloud can be run with:
+
+```bash
+python manage.py test e2e.remote
+```
 
 ### Continuous Integration
 
 Continuous Integration (CI) is managed with the help of [CircleCI](https://circleci.com/gh/mignonnesaurus/my-first-blog/tree/master).
 
-Every time a PR is opened all tests, except E2E Functional tests, are run. Passing tests are required to merge a PR to master.
+Every time a PR is opened all tests - _except E2E Functional tests_ - are run. Passing tests are required to merge a PR to master.
 
 ### Deployment
 

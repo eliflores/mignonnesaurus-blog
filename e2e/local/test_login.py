@@ -12,6 +12,7 @@ class LoginTestCase(LiveServerTestCase):
 
     @classmethod
     def tearDownClass(cls):
+        cls.selenium.find_element_by_xpath("//a[@href='/admin/logout/']").click()
         cls.selenium.quit()
         super().tearDownClass()
 
@@ -25,3 +26,5 @@ class LoginTestCase(LiveServerTestCase):
         password_input.send_keys('password')
         self.selenium.find_element_by_xpath('//input[@value="Log in"]').click()
         self.selenium.find_element_by_xpath('//*[contains(text(), "Site administration")]')
+
+        self.assertTrue(self.selenium.title.startswith('Site administration'))
