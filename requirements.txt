@@ -11,7 +11,7 @@ idna==2.6
 pbr==4.0.3
 psycopg2==2.7.2
 python-dateutil==2.8.0
-python-dotenv==0.10.1
+python-dotenv==0.10.2
 pythonanywhere==0.0.12
 pytz==2018.4
 requests>=2.20.0
