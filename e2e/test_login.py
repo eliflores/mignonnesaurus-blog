@@ -3,7 +3,7 @@ from selenium.webdriver.firefox.webdriver import WebDriver
 from django.contrib.auth import get_user_model
 
 
-class LoginTest(LiveServerTestCase):
+class LoginTestCase(LiveServerTestCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
