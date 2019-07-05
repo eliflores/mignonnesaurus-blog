@@ -99,18 +99,25 @@ python manage.py test e2e
 
 The options to run single test case(s) are also available as described [here](#single-test-cases).
 
-### How to deploy?
+### Continuous Integration
 
-Deployment is managed with the help of [Heroku](https://heroku.com/) 
+Continuous Integration (CI) is managed with the help of [CircleCI](https://circleci.com/gh/mignonnesaurus/my-first-blog/tree/master).
 
-There are 3 environments used for testing and deploying the application: 
+Every time a PR is opened all tests, except E2E Functional tests, are run. Passing tests are required to merge a PR to master.
+
+### Deployment
+
+The application runs in [Heroku](https://heroku.com/).
+
+There are 3 different environments:
 
 1. [Dev](https://mignonnesaurus-dev.herokuapp.com/)
 2. [Staging](https://mignonnesaurus-staging.herokuapp.com/)
 3. [Production](https://mignonnesaurus.herokuapp.com/)
 
-After a PR is merged, the change is _automagically_ deployed the  [Dev](https://mignonnesaurus-dev.herokuapp.com/). 
-Once changes are verified in _Dev_, they can be _promoted_ to _staging_ and then to _production_ using the [Heroku Pipelines](https://devcenter.heroku.com/articles/pipelines)
+Deployment is managed with the help of [CircleCI] and after a PR is merged, the change is _automagically_ deployed the [Development](https://mignonnesaurus-dev.herokuapp.com/) environment. 
+
+Once changes are verified in _Dev_, they can be _promoted_ to _staging_ and then to _production_ using [Heroku Pipelines](https://devcenter.heroku.com/articles/pipelines).
 
 Here is how the UI to promote changes looks like in Heroku: 
 
