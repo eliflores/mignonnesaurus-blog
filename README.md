@@ -1,4 +1,4 @@
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=mignonnesaurus_my-first-blog&metric=alert_status)](https://sonarcloud.io/dashboard?id=mignonnesaurus_my-first-blog) 
+[![CircleCI](https://circleci.com/gh/mignonnesaurus/my-first-blog/tree/master.svg?style=svg)](https://circleci.com/gh/mignonnesaurus/my-first-blog/tree/master) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=mignonnesaurus_my-first-blog&metric=alert_status)](https://sonarcloud.io/dashboard?id=mignonnesaurus_my-first-blog)  
 
 
 # My First Blog - Django Girls Tutorial
