@@ -16,7 +16,7 @@ pythonanywhere==0.0.12
 pytz==2018.4
 requests>=2.20.0
 selenium==3.141.0
-six==1.11.0
+six==1.12.0
 sqlparse==0.3.0
 stevedore==1.28.0
 urllib3>=1.24.2
