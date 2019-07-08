@@ -114,7 +114,7 @@ There are 2 different environments:
 1. [Staging](https://mignonnesaurus-staging.herokuapp.com/)
 2. [Production](https://mignonnesaurus.herokuapp.com/)
 
-Deployment is managed with the help of [CircleCI] and after a PR is merged, the change is _automagically_ deployed to the [staging](https://mignonnesaurus-staging.herokuapp.com/) environment. 
+Deployment is managed with the help of [CircleCI](https://circleci.com/gh/mignonnesaurus/my-first-blog) and after a PR is merged, the change is _automagically_ deployed to the [staging](https://mignonnesaurus-staging.herokuapp.com/) environment. 
 
 Once changes are verified in _staging_, they can be _promoted_ to _production_ using [Heroku Pipelines](https://devcenter.heroku.com/articles/pipelines).
 
