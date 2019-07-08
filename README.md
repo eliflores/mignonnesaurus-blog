@@ -1,4 +1,5 @@
 [![CircleCI](https://circleci.com/gh/mignonnesaurus/my-first-blog/tree/master.svg?style=svg)](https://circleci.com/gh/mignonnesaurus/my-first-blog/tree/master)
+[[![Test Coverage](https://api.codeclimate.com/v1/badges/88f1f4084f20c55eaf01/test_coverage)](https://codeclimate.com/github/mignonnesaurus/my-first-blog/test_coverage)
 [![Maintainability](https://api.codeclimate.com/v1/badges/88f1f4084f20c55eaf01/maintainability)](https://codeclimate.com/github/mignonnesaurus/my-first-blog/maintainability)  
 
 

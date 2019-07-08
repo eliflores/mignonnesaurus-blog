@@ -11,7 +11,7 @@ jobs:
             - v1-dependencies-{{ checksum "requirements.txt" }}
             - v1-dependencies-
       - run:
-          name: install dependencies
+          name: Install dependencies
           command: |
             python3 -m venv venv
             . venv/bin/activate
@@ -21,13 +21,20 @@ jobs:
             - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}
       - run:
-          name: run tests
+          name: Setup Code Climate test-reporter
           command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+      - run:
+          name: Run tests
+          command: |
+            ./cc-test-reporter before-build
             . venv/bin/activate
-            python runtests.py
+            coverage run runtests.py
+            coverage xml
+            ./cc-test-reporter after-build --debug --coverage-input-type coverage.py --exit-code $?
       - store_artifacts:
-          path: test-reports
-          destination: test-reports
+          path: htmlcov
   deploy:
     docker:
       - image: buildpack-deps:trusty
