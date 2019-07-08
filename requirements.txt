@@ -13,7 +13,7 @@ psycopg2==2.7.2
 python-dateutil==2.8.0
 python-dotenv==0.10.1
 pythonanywhere==0.8.1
-pytz==2018.4
+pytz==2019.1
 requests>=2.20.0
 selenium==3.141.0
 six==1.12.0
