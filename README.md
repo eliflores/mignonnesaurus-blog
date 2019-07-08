@@ -120,7 +120,7 @@ Once changes are verified in _staging_, they can be _promoted_ to _production_ u
 
 Here is how the UI to promote changes looks like in Heroku: 
 
-![pipeline](https://user-images.githubusercontent.com/615127/60797726-23c47f00-a170-11e9-9512-2ff18a2f61ea.png)
+![pipeline](https://user-images.githubusercontent.com/615127/60803185-ef09f500-a17a-11e9-9b84-5eebe0189381.png)
 
 #### Review Apps 
 
@@ -129,4 +129,4 @@ You can create an _ad-hoc_ app for a PR that is open, review the changes and the
 
 Here is how Review Apps UI looks like in Heroku: 
 
-[review_apps](https://user-images.githubusercontent.com/615127/60804548-14e4c900-a17e-11e9-8e9e-022e741128c3.png)
+![review_apps](https://user-images.githubusercontent.com/615127/60805001-2ed2db80-a17f-11e9-9f43-723592b9ed21.png)
