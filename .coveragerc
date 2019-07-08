@@ -1,0 +1,6 @@
+[run]
+include =
+    */blog/*
+omit =
+    */myvenv/*
+    *__init__.py*

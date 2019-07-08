@@ -4,7 +4,5 @@ myvenv
 db.sqlite3
 .DS_Store
 .coverage
-coverage-report
-geckodriver.log
-.scannerwork/
-sonar_scan.sh
+htmlcov
+coverage.xml
