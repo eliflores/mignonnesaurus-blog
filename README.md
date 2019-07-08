@@ -109,16 +109,24 @@ Every time a PR is opened all tests, except E2E Functional tests, are run. Passi
 
 The application runs in [Heroku](https://heroku.com/).
 
-There are 3 different environments:
+There are 2 different environments:
 
-1. [Dev](https://mignonnesaurus-dev.herokuapp.com/)
-2. [Staging](https://mignonnesaurus-staging.herokuapp.com/)
-3. [Production](https://mignonnesaurus.herokuapp.com/)
+1. [Staging](https://mignonnesaurus-staging.herokuapp.com/)
+2. [Production](https://mignonnesaurus.herokuapp.com/)
 
-Deployment is managed with the help of [CircleCI] and after a PR is merged, the change is _automagically_ deployed the [Development](https://mignonnesaurus-dev.herokuapp.com/) environment. 
+Deployment is managed with the help of [CircleCI] and after a PR is merged, the change is _automagically_ deployed to the [staging](https://mignonnesaurus-staging.herokuapp.com/) environment. 
 
-Once changes are verified in _Dev_, they can be _promoted_ to _staging_ and then to _production_ using [Heroku Pipelines](https://devcenter.heroku.com/articles/pipelines).
+Once changes are verified in _staging_, they can be _promoted_ to _production_ using [Heroku Pipelines](https://devcenter.heroku.com/articles/pipelines).
 
 Here is how the UI to promote changes looks like in Heroku: 
 
-![pipeline](https://user-images.githubusercontent.com/615127/56868332-49efd500-69f1-11e9-8c3e-03141452dca0.png)
+![pipeline](https://user-images.githubusercontent.com/615127/60797726-23c47f00-a170-11e9-9512-2ff18a2f61ea.png)
+
+#### Review Apps 
+
+Heroku has a [Review Apps](https://devcenter.heroku.com/articles/github-integration-review-apps) feature that could be used if you would like to see or test a feature or a fix under development. 
+You can create an _ad-hoc_ app for a PR that is open, review the changes and then delete the app. 
+
+Here is how Review Apps UI looks like in Heroku: 
+
+[review_apps](https://user-images.githubusercontent.com/615127/60803185-ef09f500-a17a-11e9-9b84-5eebe0189381.png)
