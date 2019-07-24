@@ -5,11 +5,12 @@
 
 # My First Blog - Django Girls Tutorial
 
-This is the result of me following the Django Girls Tutorial [here](https://tutorial.djangogirls.org/en/) and also: 
+This is the result of me following the [Django Girls Tutorial](https://tutorial.djangogirls.org/en/) and then keep having fun by: 
 * Adding Tests 
-* Adding a setup to run the blog in a staging and production environment in Heroku 
+* Setting up Continuous Integration with [circleci](https://circleci.com/)
+* Setting up [Code Climate](https://codeclimate.com/) for Code Quality and Code Coverage
+* Adding a setup to run the blog in a staging and production environment in [Heroku](https://www.heroku.com/)
     * To show an example of a delivery pipeline.
-* Adding SonarQube analysis and fixing issues found by the scanner.
 
 ### How to run the project locally?
 1. Active the virtual env:
