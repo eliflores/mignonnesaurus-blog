@@ -32,9 +32,14 @@ I :yellow_heart: the [Django Girls Tutorial](https://tutorial.djangogirls.org/en
 * Setting up a delivery pipeline to run the blog in a staging and production environment in [Heroku](https://www.heroku.com/).
 
 ## How to run the project locally?
+1. Create a virtual env
+```bash
+python -m venv venv
+```
+
 1. Active the virtual env:
 ```bash
-source myvenv/bin/activate
+source venv/bin/activate
 ```
 
 2. Start the web server:
