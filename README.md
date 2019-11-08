@@ -2,8 +2,28 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/88f1f4084f20c55eaf01/test_coverage)](https://codeclimate.com/github/mignonnesaurus/my-first-blog/test_coverage)
 [![Maintainability](https://api.codeclimate.com/v1/badges/88f1f4084f20c55eaf01/maintainability)](https://codeclimate.com/github/mignonnesaurus/my-first-blog/maintainability)  
 
-
 # My First Blog - Django Girls Tutorial
+
+- [Introduction](#Introduction)
+- [How to run the project locally?](#How-to-run-the-project-locally)
+- [How to run tests?](#How-to-run-tests)
+  - [Test suite](#Test-suite)
+  - [Single test case(s)](#Single-test-cases)
+  - [Modify the verbosity level](#Modify-the-verbosity-level)
+  - [Code coverage](#Code-coverage)
+    - [Coverage report](#Coverage-report)
+  - [E2E Tests](#E2E-Tests)
+  - [On a local machine :computer:](#On-a-local-machine-computer)
+    - [Pre-requirements](#Pre-requirements)
+    - [Running E2E Tests](#Running-E2E-Tests)
+  - [On a remote machine :cloud:](#On-a-remote-machine-cloud)
+    - [Pre-requirements](#Pre-requirements-1)
+    - [Running E2E Tests](#Running-E2E-Tests-1)
+- [Continuous Integration](#Continuous-Integration)
+- [Deployment](#Deployment)
+  - [Review Apps](#Review-Apps)
+
+## Introduction
 
 I :yellow_heart: the [Django Girls Tutorial](https://tutorial.djangogirls.org/en/). After following it, I continued the fun by:
 * Adding Tests 
@@ -11,7 +31,7 @@ I :yellow_heart: the [Django Girls Tutorial](https://tutorial.djangogirls.org/en
 * Setting up [Code Climate](https://codeclimate.com/) for Code Quality and Code Coverage
 * Setting up a delivery pipeline to run the blog in a staging and production environment in [Heroku](https://www.heroku.com/).
 
-### How to run the project locally?
+## How to run the project locally?
 1. Active the virtual env:
 ```bash
 source myvenv/bin/activate
@@ -24,9 +44,9 @@ python manage.py runserver
 
 3. Development server will run at: `http://127.0.0.1:8000/`
 
-### How to run tests?
+## How to run tests?
 
-#### Test suite
+### Test suite
 
 The test suite currently includes _unit_ and _integration_ tests and can be run with:
 
@@ -36,7 +56,7 @@ python runtests.py
 
 It does not include _E2E_ / _UI_ tests, they can be run separately, see the [E2E Tests](#e2e-tests) section.
 
-#### Single test case(s)
+### Single test case(s)
 
 You can pass the module or test case:
 
@@ -60,7 +80,7 @@ python manage.py test --pattern="*_forms.py"
 python manage.py test -p "*_forms.py"
 ```
 
-#### Modify the verbosity level 
+### Modify the verbosity level 
 
 You can get more details about the test execution by passing the argument `--verbosity` or `-v`. For the value you can choose from: `0, 1, 2, 3`.
 
@@ -69,25 +89,25 @@ For example, to pass verbosity of 2:
 python manage.py test tests -v 2
 ```
 
-#### Code coverage
+### Code coverage
 
 ```bash
 coverage run manage.py test tests
 ```
 
-##### Coverage report
+#### Coverage report
 
 ```bash
 coverage html -d coverage-report
 ```
 
-#### E2E Tests 
+### E2E Tests 
 
 :mag_right: It is also possible to run a single E2E test by using the options described [here](#single-test-cases).
 
-#### On a local machine :computer:
+### On a local machine :computer:
 
-##### Pre-requirements
+#### Pre-requirements
 
 * Install [geckodriver](https://github.com/mozilla/geckodriver) - The [Web Driver](https://developer.mozilla.org/en-US/docs/Web/WebDriver) for Firefox.
 
@@ -95,7 +115,7 @@ coverage html -d coverage-report
 brew install geckodriver
 ```
 
-##### Running E2E Tests 
+#### Running E2E Tests 
 
 E2E Tests are currently run separately from the main [test suite](#how-to-run-tests) and can be run with:
 
@@ -103,15 +123,15 @@ E2E Tests are currently run separately from the main [test suite](#how-to-run-te
 python manage.py test e2e.local
 ```
 
-#### On a remote machine :cloud:
+### On a remote machine :cloud:
 
 Remote E2E Tests - tests that run _on the cloud_ - are setup to run on [Sauce Labs](https://saucelabs.com/) :zap:.
 
-##### Pre-requirements
+#### Pre-requirements
 
 * A _username_ and _API Key_ is needed to run the tests on the Sauce Labs Testing Cloud. 
 
-##### Running E2E Tests 
+#### Running E2E Tests 
 
 Tests that run on the cloud can be run with:
 
@@ -119,13 +139,13 @@ Tests that run on the cloud can be run with:
 python manage.py test e2e.remote
 ```
 
-### Continuous Integration
+## Continuous Integration
 
 Continuous Integration (CI) is managed with the help of [CircleCI](https://circleci.com/gh/mignonnesaurus/my-first-blog/tree/master).
 
 Every time a PR is opened all tests - _except E2E Functional tests_ - are run. Passing tests are required to merge a PR to master.
 
-### Deployment
+## Deployment
 
 The application runs in [Heroku](https://heroku.com/).
 
@@ -142,7 +162,7 @@ Here is how the UI to promote changes looks like in Heroku:
 
 ![pipeline](https://user-images.githubusercontent.com/615127/60803185-ef09f500-a17a-11e9-9b84-5eebe0189381.png)
 
-#### Review Apps 
+### Review Apps 
 
 Heroku has a [Review Apps](https://devcenter.heroku.com/articles/github-integration-review-apps) feature that could be used if you would like to see or test a feature or a fix under development. 
 You can create an _ad-hoc_ app for a PR that is open, review the changes and then delete the app. 
