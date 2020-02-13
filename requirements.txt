@@ -20,7 +20,7 @@ six==1.13.0
 sqlparse==0.3.0
 stevedore==1.31.0
 urllib3>=1.24.2
-virtualenv==16.7.7
+virtualenv==20.0.3
 virtualenv-clone==0.5.3
 virtualenvwrapper==4.8.4
 whitenoise==4.1.4
