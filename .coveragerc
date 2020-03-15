@@ -1,6 +1,6 @@
 [run]
 include =
-    blog/*
+    blog/*.py
 omit =
     *static/admin/*
     *blog/migrations/*
