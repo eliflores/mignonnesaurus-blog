@@ -1,0 +1,2 @@
+exclude_patterns:
+- "static/admin/**"
