@@ -1,6 +1,6 @@
 [run]
 include =
-    */blog/*
+    blog/*
 omit =
-    */myvenv/*
     *__init__.py*
+    static/admin*
