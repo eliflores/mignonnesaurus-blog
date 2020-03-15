@@ -2,10 +2,11 @@
 include =
     blog/*
 omit =
-    static/admin/*
-    blog/migrations/*
-    blog/static/*
-    e2e/*
+    *static/admin/*
+    *blog/migrations/*
+    *blog/static/*
+    *e2e/*
+    *tests/*
     *__init__.py*
     *.yml*
     *.md*
