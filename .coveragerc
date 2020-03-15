@@ -3,4 +3,4 @@ include =
     blog/*
 omit =
     *__init__.py*
-    static/admin*
+    static/admin/*
