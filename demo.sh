@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+MY_BLOG_PASSWORD=$MY_BLOG_USERNAME && MY_BLOG_PASSWORD=$MY_BLOG_PASSWORD && pytest e2e/demos/blog_demo_test.py -v --browser=firefox --server=localhost --port=8000 --demo_mode --slow --start_page=http://localhost:8000
