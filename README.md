@@ -44,10 +44,10 @@ source venv/bin/activate
 
 2. Start the web server:
 ```bash
-python manage.py runserver
+python manage.py runserver localhost:8000
 ```
 
-3. Development server will run at: `http://127.0.0.1:8000/`
+3. Development server will run at: `http://localhost:8000/`
 
 ## How to run tests?
 
@@ -142,6 +142,23 @@ Tests that run on the cloud can be run with:
 
 ```bash
 python manage.py test e2e.remote
+```
+
+### Demo Tests
+
+Demo tests are E2E selenium tests that run with [SeleniumBase](https://pypi.org/project/seleniumbase/) to provide a visual blog tour of this project.
+
+#### Pre-requirements
+
+* Install [geckodriver](https://github.com/mozilla/geckodriver) - The [Web Driver](https://developer.mozilla.org/en-US/docs/Web/WebDriver) for Firefox.
+
+```bash
+brew install geckodriver
+```
+
+#### Run the demo tests
+```bash
+./tour.sh
 ```
 
 ## Continuous Integration
