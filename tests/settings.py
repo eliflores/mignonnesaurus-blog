@@ -1,6 +1,6 @@
 import os
 
-TEST_BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = 'test_key'
 
@@ -55,7 +55,7 @@ DEBUG = True
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(TEST_BASE_DIR, 'test_db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'test_db.sqlite3'),
     }
 }
 
