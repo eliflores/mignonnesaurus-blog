@@ -14,32 +14,41 @@ MY_BLOG_PASSWORD = os.getenv('MY_BLOG_PASSWORD')
 
 class BlogDemoTest(BaseCase):
     def test_post_interactions(self):
-        admin_page = AdminPage(self)
         home_page = HomePage(self)
         new_blog_post_page = NewPostPage(self)
         post_page = PostPage(self)
         new_comment_page = NewCommentPage(self)
 
-        admin_page.load()
-        admin_page.login(MY_BLOG_USERNAME, MY_BLOG_PASSWORD)
+        self.login()
 
         home_page.load()
         home_page.new_post()
 
-        new_blog_post_page.add_post('Star Wars IX: The Rise of Skywalker',
-                                    'Star Wars IX: The Rise of Skywalker will be released on December 18, 2019.')
+        new_blog_post_page.add_post('Your Favorite Star Wars Quotes',
+                                    'What are your favorite Star Wars Quotes?')
         new_blog_post_page.publish_post()
 
         home_page.load()
-        home_page.view_post('Star Wars IX: The Rise of Skywalker')
+        home_page.view_post('Your Favorite Star Wars Quotes')
 
         post_page.new_comment()
-        new_comment_page.add_comment('Yoda', 'Happy I am ❤️')
+        new_comment_page.add_comment('Han Solo',
+                                     '"Crazy thing is, it’s true. The Force, the Jedi — all of it. It’s all true."️')
+        post_page.approve_comment()
 
         post_page.new_comment()
-        new_comment_page.add_comment('Han Solo', 'Am I in the movie?')
+        new_comment_page.add_comment('Yoda', '"Do. Or do not. There is no try."')
+        post_page.approve_comment()
+
+        post_page.new_comment()
+        new_comment_page.add_comment('Darth Vader', '"I find your lack of faith disturbing."')
+        post_page.approve_comment()
 
         post_page.delete_post()
 
-        home_page.load()
         home_page.logout()
+
+    def login(self):
+        admin_page = AdminPage(self)
+        admin_page.load()
+        admin_page.login(MY_BLOG_USERNAME, MY_BLOG_PASSWORD)
