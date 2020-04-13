@@ -2,7 +2,7 @@ import os
 
 from seleniumbase import BaseCase
 
-from e2e.pages.admin import AdminPage
+from e2e.pages.admin import AdminLoginPage
 from e2e.pages.home import HomePage
 from e2e.pages.new_comment import NewCommentPage
 from e2e.pages.new_post import NewPostPage
@@ -49,6 +49,6 @@ class BlogDemoTest(BaseCase):
         home_page.logout()
 
     def login(self):
-        admin_page = AdminPage(self)
-        admin_page.load()
-        admin_page.login(MY_BLOG_USERNAME, MY_BLOG_PASSWORD)
+        admin_login_page = AdminLoginPage(self)
+        admin_login_page.load()
+        admin_login_page.login(MY_BLOG_USERNAME, MY_BLOG_PASSWORD)

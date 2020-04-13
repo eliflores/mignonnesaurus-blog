@@ -1,4 +1,4 @@
-class AdminPage:
+class AdminLoginPage:
     USERNAME_INPUT = '#id_username'
     PASSWORD_INPUT = '#id_password'
     SUBMIT_BUTTON = 'input[type="submit"]'
