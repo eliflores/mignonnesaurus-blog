@@ -15,7 +15,7 @@ MY_BLOG_PASSWORD = os.getenv('MY_BLOG_PASSWORD')
 class BlogDemoTest(BaseCase):
     def test_post_interactions(self):
         home_page = HomePage(self)
-        new_blog_post_page = NewPostPage(self)
+        new_post_page = NewPostPage(self)
         post_page = PostPage(self)
         new_comment_page = NewCommentPage(self)
 
@@ -24,9 +24,9 @@ class BlogDemoTest(BaseCase):
         home_page.load()
         home_page.new_post()
 
-        new_blog_post_page.add_post('Your Favorite Star Wars Quotes',
-                                    'What are your favorite Star Wars Quotes?')
-        new_blog_post_page.publish_post()
+        new_post_page.add_post('Your Favorite Star Wars Quotes',
+                               'What are your favorite Star Wars Quotes?')
+        new_post_page.publish_post()
 
         home_page.load()
         home_page.view_post('Your Favorite Star Wars Quotes')
