@@ -19,3 +19,13 @@ class PostDetailViewTest(TestCase):
 
         response = self.client.get(f'/post/{post.id}/')
         self.assertTemplateUsed(response, 'blog/post_detail.html')
+
+
+class PostDraftListViewTest(TestCase):
+    def setUp(self):
+        user = User.objects.create_user('testuser', 'testuser@example.com', 'testpassword')
+        self.client.login(username=user.username, password='testpassword')
+
+    def test_uses_post_draft_list_template(self):
+        response = self.client.get(f'/drafts/')
+        self.assertTemplateUsed(response, 'blog/post_draft_list.html')
