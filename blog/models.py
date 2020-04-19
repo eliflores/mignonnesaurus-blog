@@ -11,6 +11,10 @@ class Post(models.Model):
     published_date = models.DateTimeField(
         blank=True, null=True)
 
+    @property
+    def draft(self):
+        return self.published_date is None
+
     def publish(self):
         self.published_date = timezone.now()
         self.save()
