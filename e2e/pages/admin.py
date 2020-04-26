@@ -11,8 +11,6 @@ class AdminLoginPage:
         self.browser.maximize_window()
 
     def login(self, username, password):
-        print('hola')
-        print(*self.USERNAME_INPUT)
         self.browser.type(self.USERNAME_INPUT, username)
         self.browser.type(self.PASSWORD_INPUT, password)
         self.browser.click(self.SUBMIT_BUTTON)
