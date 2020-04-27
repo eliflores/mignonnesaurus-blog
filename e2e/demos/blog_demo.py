@@ -12,7 +12,7 @@ MY_BLOG_USERNAME = os.getenv('MY_BLOG_USERNAME')
 MY_BLOG_PASSWORD = os.getenv('MY_BLOG_PASSWORD')
 
 
-class BlogDemoTest(BaseCase):
+class BlogDemo(BaseCase):
     def test_post_interactions(self):
         home_page = HomePage(self)
         new_post_page = NewPostPage(self)
