@@ -2,7 +2,7 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/de40c9b25f285ecb99ea/test_coverage)](https://codeclimate.com/github/mignonnesaurus/mignonnesaurus-blog/test_coverage)
 [![Maintainability](https://api.codeclimate.com/v1/badges/de40c9b25f285ecb99ea/maintainability)](https://codeclimate.com/github/mignonnesaurus/mignonnesaurus-blog/maintainability)  
 
-# My First Blog - Django Girls Tutorial
+# Mignonnesaurus Blog
 
 - [Introduction](#Introduction)
 - [How to run the project locally?](#How-to-run-the-project-locally)
@@ -25,7 +25,7 @@
 
 ## Introduction
 
-I :yellow_heart: the [Django Girls Tutorial](https://tutorial.djangogirls.org/en/). After following it, I continued the fun by:
+I :yellow_heart: the [Django Girls Tutorial](https://tutorial.djangogirls.org/en/). After [following it](https://github.com/mignonnesaurus/my-first-blog), I continued the fun by:
 * Adding Tests 
 * Setting up Continuous Integration with [circleci](https://circleci.com/)
 * Setting up [Code Climate](https://codeclimate.com/) for Code Quality and Code Coverage
@@ -163,7 +163,7 @@ brew install geckodriver
 
 ## Continuous Integration
 
-Continuous Integration (CI) is managed with the help of [CircleCI](https://circleci.com/gh/mignonnesaurus/my-first-blog/tree/master).
+Continuous Integration (CI) is managed with the help of [CircleCI](https://circleci.com/gh/mignonnesaurus/mignonnesaurus-blog/tree/master).
 
 Every time a PR is opened all tests - _except E2E Functional tests_ - are run. Passing tests are required to merge a PR to master.
 
@@ -176,7 +176,7 @@ There are 2 different environments:
 1. [Staging](https://mignonnesaurus-staging.herokuapp.com/)
 2. [Production](https://mignonnesaurus.herokuapp.com/)
 
-Deployment is managed with the help of [CircleCI](https://circleci.com/gh/mignonnesaurus/my-first-blog) and after a PR is merged, the change is _automagically_ deployed to the [staging](https://mignonnesaurus-staging.herokuapp.com/) environment. 
+Deployment is managed with the help of [CircleCI](https://circleci.com/gh/mignonnesaurus/mignonnesaurus-blog) and after a PR is merged, the change is _automagically_ deployed to the [staging](https://mignonnesaurus-staging.herokuapp.com/) environment. 
 
 Once changes are verified in _staging_, they can be _promoted_ to _production_ using [Heroku Pipelines](https://devcenter.heroku.com/articles/pipelines).
 
