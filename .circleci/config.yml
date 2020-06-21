@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/python:3.6.4
-    working_directory: ~/my-first-blog
+    working_directory: ~/mignonnesaurus-blog
     steps:
       - checkout
       - restore_cache:
