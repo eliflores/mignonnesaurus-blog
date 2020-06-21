@@ -1,6 +1,6 @@
-[![CircleCI](https://circleci.com/gh/mignonnesaurus/my-first-blog/tree/master.svg?style=svg)](https://circleci.com/gh/mignonnesaurus/my-first-blog/tree/master)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/88f1f4084f20c55eaf01/test_coverage)](https://codeclimate.com/github/mignonnesaurus/my-first-blog/test_coverage)
-[![Maintainability](https://api.codeclimate.com/v1/badges/88f1f4084f20c55eaf01/maintainability)](https://codeclimate.com/github/mignonnesaurus/my-first-blog/maintainability)  
+[![CircleCI](https://circleci.com/gh/mignonnesaurus/mignonnesaurus-blog/tree/master.svg?style=svg)](https://circleci.com/gh/mignonnesaurus/mignonnesaurus-blog/tree/master)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/de40c9b25f285ecb99ea/test_coverage)](https://codeclimate.com/github/mignonnesaurus/mignonnesaurus-blog/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/de40c9b25f285ecb99ea/maintainability)](https://codeclimate.com/github/mignonnesaurus/mignonnesaurus-blog/maintainability)  
 
 # My First Blog - Django Girls Tutorial
 
