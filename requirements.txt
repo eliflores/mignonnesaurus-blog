@@ -25,4 +25,4 @@ virtualenv-clone==0.5.4
 virtualenvwrapper==4.8.4
 whitenoise==5.1.0
 coverage==5.2
-seleniumbase==1.43.0
+seleniumbase==1.43.1
