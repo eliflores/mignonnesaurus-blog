@@ -1,6 +1,6 @@
 [![CircleCI](https://circleci.com/gh/eliflores/mignonnesaurus-blog/tree/master.svg?style=svg)](https://circleci.com/gh/mignonnesaurus/mignonnesaurus-blog/tree/master)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/de40c9b25f285ecb99ea/test_coverage)](https://codeclimate.com/github/mignonnesaurus/mignonnesaurus-blog/test_coverage)
-[![Maintainability](https://api.codeclimate.com/v1/badges/de40c9b25f285ecb99ea/maintainability)](https://codeclimate.com/github/mignonnesaurus/mignonnesaurus-blog/maintainability)  
+[![Test Coverage](https://api.codeclimate.com/v1/badges/6ed84ae41b3695a8af27/test_coverage)](https://codeclimate.com/github/eliflores/mignonnesaurus-blog/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/6ed84ae41b3695a8af27/maintainability)](https://codeclimate.com/github/eliflores/mignonnesaurus-blog/maintainability)
 
 # Mignonnesaurus Blog
 
