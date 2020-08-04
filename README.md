@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/eliflores/mignonnesaurus-blog/tree/master.svg?style=svg)](https://circleci.com/gh/mignonnesaurus/mignonnesaurus-blog/tree/master)
+[![CircleCI](https://circleci.com/gh/eliflores/mignonnesaurus-blog.svg?style=svg)](https://circleci.com/gh/eliflores/mignonnesaurus-blog)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/6ed84ae41b3695a8af27/test_coverage)](https://codeclimate.com/github/eliflores/mignonnesaurus-blog/test_coverage)
 [![Maintainability](https://api.codeclimate.com/v1/badges/6ed84ae41b3695a8af27/maintainability)](https://codeclimate.com/github/eliflores/mignonnesaurus-blog/maintainability)
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
