@@ -36,6 +36,12 @@ jobs:
       - store_artifacts:
           path: htmlcov
       - run:
+          name: Install Geckodriver
+          command: |
+            mkdir drivers
+            wget https://github.com/mozilla/geckodriver/releases/download/v0.27.0/geckodriver-v0.27.0-linux64.tar.gz
+            tar -xvf geckodriver-v0.27.0-linux64.tar.gz -C drivers
+      - run:
           name: Add Gecko Driver to path
           command: |
             echo 'export PATH=$HOME/mignonnesaurus-blog/drivers:$PATH' >> $BASH_ENV
