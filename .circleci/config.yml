@@ -3,6 +3,8 @@ jobs:
   build:
     docker:
       - image: circleci/python:3.6.4-jessie-browsers
+    environment:
+      PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/drivers"
     working_directory: ~/mignonnesaurus-blog
     steps:
       - checkout
