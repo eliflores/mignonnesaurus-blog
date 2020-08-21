@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.6.4
+      - image: circleci/python:3.6.4-jessie-browsers
     working_directory: ~/mignonnesaurus-blog
     steps:
       - checkout
@@ -35,6 +35,11 @@ jobs:
             ./cc-test-reporter after-build --debug --coverage-input-type coverage.py --exit-code $?
       - store_artifacts:
           path: htmlcov
+      - run:
+          name: Run E2E (headless) tests
+          command: |
+            . venv/bin/activate
+             python3 manage.py test e2e.headless
   deploy:
     docker:
       - image: buildpack-deps:trusty
