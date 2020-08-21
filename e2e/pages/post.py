@@ -3,14 +3,14 @@ class PostPage:
     APPROVE_COMMENT_BUTTON = '#approve-comment'
     DELETE_POST_BUTTON = '#delete-post'
 
-    def __init__(self, browser):
-        self.browser = browser
+    def __init__(self, page_driver):
+        self.driver = page_driver
 
     def new_comment(self):
-        self.browser.click(self.ADD_COMMENT_BUTTON)
+        self.driver.click(self.ADD_COMMENT_BUTTON)
 
     def approve_comment(self):
-        self.browser.click(self.APPROVE_COMMENT_BUTTON)
+        self.driver.click(self.APPROVE_COMMENT_BUTTON)
 
     def delete_post(self):
-        self.browser.click(self.DELETE_POST_BUTTON)
+        self.driver.click(self.DELETE_POST_BUTTON)
