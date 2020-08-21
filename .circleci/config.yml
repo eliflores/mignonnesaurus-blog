@@ -1,10 +1,14 @@
-version: 2
+version: 2.1
+orbs:
+  browser-tools: circleci/browser-tools@1.0.1
 jobs:
   build:
     docker:
       - image: circleci/python:3.8.5-browsers
     working_directory: ~/mignonnesaurus-blog
     steps:
+      - browser-tools/install-firefox
+      - browser-tools/install-geckodriver
       - checkout
       - restore_cache:
           keys:
@@ -35,17 +39,6 @@ jobs:
             ./cc-test-reporter after-build --debug --coverage-input-type coverage.py --exit-code $?
       - store_artifacts:
           path: htmlcov
-      - run:
-          name: Install Geckodriver
-          command: |
-            mkdir drivers
-            wget https://github.com/mozilla/geckodriver/releases/download/v0.20.1/geckodriver-v0.20.1-linux64.tar.gz
-            tar -xvf geckodriver-v0.20.1-linux64.tar.gz -C drivers
-      - run:
-          name: Add Gecko Driver to path
-          command: |
-            echo 'export PATH=$HOME/mignonnesaurus-blog/drivers:$PATH' >> $BASH_ENV
-            source /home/circleci/.bashrc
       - run:
           name: Run E2E (headless) tests
           command: |
