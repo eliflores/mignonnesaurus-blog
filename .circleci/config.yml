@@ -39,8 +39,8 @@ jobs:
           name: Install Geckodriver
           command: |
             mkdir drivers
-            wget https://github.com/mozilla/geckodriver/releases/download/v0.26.0/geckodriver-v0.26.0-linux64.tar.gz
-            tar -xvf geckodriver-v0.26.0-linux64.tar.gz -C drivers
+            wget https://github.com/mozilla/geckodriver/releases/download/v0.20.1/geckodriver-v0.20.1-linux64.tar.gz
+            tar -xvf geckodriver-v0.20.1-linux64.tar.gz -C drivers
       - run:
           name: Add Gecko Driver to path
           command: |
