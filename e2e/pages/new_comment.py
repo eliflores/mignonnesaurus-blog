@@ -1,10 +1,10 @@
 class NewCommentPage:
     SAVE_COMMENT_BUTTON = '#save-comment'
 
-    def __init__(self, browser):
-        self.browser = browser
+    def __init__(self, driver):
+        self.driver = driver
 
     def add_comment(self, author, text):
-        self.browser.type('#id_author', author)
-        self.browser.type('#id_text', text)
-        self.browser.click(self.SAVE_COMMENT_BUTTON)
+        self.driver.type('#id_author', author)
+        self.driver.type('#id_text', text)
+        self.driver.click(self.SAVE_COMMENT_BUTTON)
