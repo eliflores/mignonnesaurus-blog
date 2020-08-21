@@ -129,6 +129,12 @@ E2E Tests are currently run separately from the main [test suite](#how-to-run-te
 python manage.py test e2e.local
 ```
 
+and run the headless tests (which are also part of the CI build) with:
+
+```bash
+python manage.py test e2e.headless
+```
+
 ### On a remote machine :cloud:
 
 Remote E2E Tests - tests that run _on the cloud_ - are setup to run on [Sauce Labs](https://saucelabs.com/) :zap:.
@@ -145,28 +151,24 @@ Tests that run on the cloud can be run with:
 python manage.py test e2e.remote
 ```
 
-### Demo Tests
+### Demo
 
-Demo tests are E2E selenium tests that run with [SeleniumBase](https://pypi.org/project/seleniumbase/) to provide a visual blog tour of this project.
+The demo is run with [SeleniumBase](https://pypi.org/project/seleniumbase/) to provide a visual demo of this project.
 
 #### Pre-requirements
 
 * Install [geckodriver](https://github.com/mozilla/geckodriver) - The [Web Driver](https://developer.mozilla.org/en-US/docs/Web/WebDriver) for Firefox.
 
+#### Run the demo
 ```bash
-brew install geckodriver
-```
-
-#### Run the demo tests
-```bash
-./tour.sh
+./demo.sh
 ```
 
 ## Continuous Integration
 
 Continuous Integration (CI) is managed with the help of [CircleCI](https://circleci.com/gh/mignonnesaurus/mignonnesaurus-blog/tree/master).
 
-Every time a PR is opened all tests - _except E2E Functional tests_ - are run. Passing tests are required to merge a PR to master.
+Every time a PR is opened all tests inside [tests](tests) and [e2e/headless](e2e/headless) are run. Passing tests are required to merge a PR to master.
 
 ## Deployment
 
