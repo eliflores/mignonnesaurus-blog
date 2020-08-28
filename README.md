@@ -159,7 +159,7 @@ A visual demo of the blog, implemented with [SeleniumBase](https://pypi.org/proj
 
 ## Continuous Integration
 
-Continuous Integration (CI) is managed with the help of [CircleCI](https://circleci.com/gh/mignonnesaurus/mignonnesaurus-blog/tree/master).
+Continuous Integration (CI) is managed with the help of [CircleCI](https://app.circleci.com/pipelines/github/eliflores/mignonnesaurus-blog).
 
 Every time a PR is opened all tests inside [tests](tests) are run. Passing tests are required to merge a PR to master.
 
