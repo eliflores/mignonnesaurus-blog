@@ -3,8 +3,8 @@ from django.test import LiveServerTestCase
 from selenium.webdriver.firefox import options
 from selenium.webdriver.firefox.webdriver import WebDriver
 
-from e2e.driver import SeleniumDriver
-from e2e.pages.admin import AdminLoginPage
+from driver import SeleniumDriver
+from page import AdminLoginPage
 
 
 class LoginTestCase(LiveServerTestCase):

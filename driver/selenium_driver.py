@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 
-from e2e.driver.driver import Driver
+from driver.driver import Driver
 
 
 class SeleniumDriver(Driver):

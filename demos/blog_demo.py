@@ -2,12 +2,12 @@ import os
 
 from seleniumbase import BaseCase
 
-from e2e.pages.admin import AdminLoginPage
-from e2e.driver import SeleniumBaseDriver
-from e2e.pages.home import HomePage
-from e2e.pages.new_comment import NewCommentPage
-from e2e.pages.new_post import NewPostPage
-from e2e.pages.post import PostPage
+from driver import SeleniumBaseDriver
+from page import AdminLoginPage
+from page import HomePage
+from page import NewCommentPage
+from page import NewPostPage
+from page import PostPage
 
 MY_BLOG_USERNAME = os.getenv('MY_BLOG_USERNAME')
 MY_BLOG_PASSWORD = os.getenv('MY_BLOG_PASSWORD')

@@ -3,13 +3,14 @@ from django.test import LiveServerTestCase
 from selenium.webdriver.firefox import options
 from selenium.webdriver.firefox.webdriver import WebDriver
 
-from e2e.driver import SeleniumDriver
-from e2e.pages.admin import AdminLoginPage
-from e2e.pages.home import HomePage
-from e2e.pages.new_post import NewPostPage
+from driver import SeleniumDriver
+from page import AdminLoginPage
+from page import HomePage
+from page import NewPostPage
+from page import PostPage
 
 
-class PostPublishTestCase(LiveServerTestCase):
+class PostDeleteTestCase(LiveServerTestCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -19,16 +20,17 @@ class PostPublishTestCase(LiveServerTestCase):
 
     @classmethod
     def tearDownClass(cls):
-        cls.webdriver.quit()
         super().tearDownClass()
+        cls.webdriver.quit()
 
     def setUp(self):
         self.page_driver = SeleniumDriver(self.webdriver)
         get_user_model().objects.create_superuser('admin', 'admin@example.com', 'password')
 
-    def test_a_post_can_be_published(self):
+    def test_a_post_can_be_deleted(self):
         home_page = HomePage(self.page_driver, self.live_server_url)
         new_post_page = NewPostPage(self.page_driver)
+        post_page = PostPage(self.page_driver)
 
         self.login()
 
@@ -40,7 +42,12 @@ class PostPublishTestCase(LiveServerTestCase):
         new_post_page.publish_post()
 
         home_page.load()
-        self.assertTrue(home_page.has_post_with_title(post_title))
+        home_page.view_post(post_title)
+
+        post_page.delete_post()
+
+        home_page.load()
+        self.assertFalse(home_page.has_post_with_title(post_title))
 
         home_page.logout()
 
