@@ -4,7 +4,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/python:3.8.5-browsers
+      - image: circleci/python:3.8.5
     working_directory: ~/mignonnesaurus-blog
     steps:
       - browser-tools/install-firefox
