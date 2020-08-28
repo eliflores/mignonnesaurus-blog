@@ -1,4 +1,4 @@
-from e2e.driver.driver import Driver
+from driver.driver import Driver
 
 
 class SeleniumBaseDriver(Driver):
