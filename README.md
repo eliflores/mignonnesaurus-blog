@@ -54,10 +54,10 @@ python manage.py runserver localhost:8000
 
 ### Test suite
 
-The test suite currently includes _unit_ and _integration_ tests and can be run with:
+All the tests that are run as part of CI are in the [tests](tests) folder and you can run them locally with:
 
 ```bash
-python runtests.py
+python manage.py test tests
 ```
 
 It does not include _E2E_ / _UI_ tests, they can be run separately, see the [E2E Tests](#e2e-tests) section.
@@ -129,12 +129,6 @@ E2E Tests are currently run separately from the main [test suite](#how-to-run-te
 python manage.py test e2e.local
 ```
 
-and run the headless tests (which are also part of the CI build) with:
-
-```bash
-python manage.py test e2e.headless
-```
-
 ### On a remote machine :cloud:
 
 Remote E2E Tests - tests that run _on the cloud_ - are setup to run on [Sauce Labs](https://saucelabs.com/) :zap:.
@@ -151,24 +145,23 @@ Tests that run on the cloud can be run with:
 python manage.py test e2e.remote
 ```
 
-### Demo
+### Demos
 
-The demo is run with [SeleniumBase](https://pypi.org/project/seleniumbase/) to provide a visual demo of this project.
+A visual demo of the blog, implemented with [SeleniumBase](https://pypi.org/project/seleniumbase/) can be run with:
+
+```bash
+./demo.sh
+```
 
 #### Pre-requirements
 
 * Install [geckodriver](https://github.com/mozilla/geckodriver) - The [Web Driver](https://developer.mozilla.org/en-US/docs/Web/WebDriver) for Firefox.
 
-#### Run the demo
-```bash
-./demo.sh
-```
-
 ## Continuous Integration
 
 Continuous Integration (CI) is managed with the help of [CircleCI](https://circleci.com/gh/mignonnesaurus/mignonnesaurus-blog/tree/master).
 
-Every time a PR is opened all tests inside [tests](tests) and [e2e/headless](e2e/headless) are run. Passing tests are required to merge a PR to master.
+Every time a PR is opened all tests inside [tests](tests) are run. Passing tests are required to merge a PR to master.
 
 ## Deployment
 
