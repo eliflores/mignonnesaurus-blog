@@ -9,7 +9,6 @@ jobs:
     steps:
       - browser-tools/install-firefox
       - browser-tools/install-geckodriver
-      - checkout
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "requirements.txt" }}
