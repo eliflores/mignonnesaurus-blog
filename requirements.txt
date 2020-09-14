@@ -1,6 +1,6 @@
 certifi==2020.6.20
 chardet==3.0.4
-coverage==5.2.1
+coverage==5.3
 dj-database-url==0.5.0
 Django==3.1.1
 django-configurations==2.2
@@ -24,5 +24,5 @@ virtualenv==20.0.31
 virtualenv-clone==0.5.4
 virtualenvwrapper==4.8.4
 whitenoise==5.2.0
-coverage==5.2.1
+coverage==5.3
 seleniumbase==1.49.9
