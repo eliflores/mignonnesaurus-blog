@@ -1,6 +1,6 @@
 certifi==2020.12.5
-chardet==3.0.4
-coverage==5.3
+chardet==4.0.0
+coverage==5.3.1
 dj-database-url==0.5.0
 Django==3.1.5
 django-configurations==2.2
@@ -14,7 +14,7 @@ python-dateutil==2.8.1
 python-dotenv==0.15.0
 pythonanywhere==0.9.5
 pytz==2020.5
-requests==2.25.0
+requests==2.25.1
 selenium==3.141.0
 six==1.15.0
 sqlparse==0.4.1
@@ -24,5 +24,4 @@ virtualenv==20.4.0
 virtualenv-clone==0.5.4
 virtualenvwrapper==4.8.4
 whitenoise==5.2.0
-coverage==5.3
-seleniumbase==1.50.20
+seleniumbase==1.52.6
