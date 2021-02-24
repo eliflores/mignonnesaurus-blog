@@ -189,3 +189,17 @@ You can create an _ad-hoc_ app for a PR that is open, review the changes and the
 Here is how Review Apps UI looks like in Heroku: 
 
 ![review_apps](https://user-images.githubusercontent.com/615127/60805001-2ed2db80-a17f-11e9-9f43-723592b9ed21.png)
+
+---
+Shield: [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
+
+This work is licensed under a
+[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
+
+The tutorial that was followed for the creation of this blog is attributed to [Django Girls](https://djangogirls.org/) and it can be found [here](https://tutorial.djangogirls.org/).
+
+[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
+
+[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
+[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
+[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
