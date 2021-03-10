@@ -61,7 +61,9 @@ All the tests that are run as part of CI are in the [tests](tests) folder and yo
 python manage.py test tests
 ```
 
-It does not include _E2E_ / _UI_ tests, they can be run separately, see the [E2E Tests](#e2e-tests) section.
+The execution includes _E2E_ Functional Tests that run on Firefox in headless mode. 
+
+_E2E_ / _UI_ tests that do not run in headless mode, can be run separately, see the [E2E Tests](#e2e-tests) section.
 
 ### Single test case(s)
 
