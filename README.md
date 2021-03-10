@@ -33,23 +33,36 @@ I :yellow_heart: the [Django Girls Tutorial](https://tutorial.djangogirls.org/en
 * Setting up [Code Climate](https://codeclimate.com/)
 * Setting up a delivery pipeline to run the blog in a staging and production environment in [Heroku](https://www.heroku.com/)
 
-## How to run the project locally?
+## Getting started
+
+### How to run the project locally?
+0. Make sure you have [GNU Make](https://www.gnu.org/software/make/) installed on your machine.
+  * A [Makefile](Makefile) was added to the project to simplify some tasks.
+
 1. Create a virtual env
 ```bash
 python -m venv venv
 ```
 
-1. Active the virtual env:
+2. Active the virtual env:
 ```bash
 source venv/bin/activate
 ```
 
-2. Start the web server:
+3. Setup dev environment: 
 ```bash
-python manage.py runserver localhost:8000
+make dev_setup
 ```
 
-3. Development server will run at: `http://localhost:8000/`
+4. Make sure things are healthy by running the tests: 
+```bash
+make test
+```
+
+5. Start the server:
+```bash
+make runserver
+```
 
 ## How to run tests?
 
@@ -60,6 +73,8 @@ All the tests that are run as part of CI are in the [tests](tests) folder and yo
 ```bash
 python manage.py test tests
 ```
+
+ℹ️ Additionally, you can run: `make test`
 
 The execution includes _E2E_ Functional Tests that run on Firefox in headless mode. 
 
@@ -116,17 +131,10 @@ coverage html -d coverage-report
 
 ### On a local machine :computer:
 
-#### Pre-requirements
-
-* Install [geckodriver](https://github.com/mozilla/geckodriver) - The [Web Driver](https://developer.mozilla.org/en-US/docs/Web/WebDriver) for Firefox.
-
-```bash
-brew install geckodriver
-```
-
 #### Running E2E Tests 
 
-E2E Tests are currently run separately from the main [test suite](#how-to-run-tests) and can be run with:
+E2E Tests that do not run in headless mode are currently run separately from the main [test suite](#how-to-run-tests) 
+and can be run with:
 
 ```bash
 python manage.py test e2e.local
@@ -153,8 +161,10 @@ python manage.py test e2e.remote
 A visual demo of the blog, implemented with [SeleniumBase](https://pypi.org/project/seleniumbase/) can be run with:
 
 ```bash
-./demo.sh
+sh demo.sh
 ```
+
+ℹ️ Make sure that your development server is already started, before running the demo.
 
 #### Pre-requirements
 
