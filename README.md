@@ -3,7 +3,7 @@
 [![CircleCI](https://circleci.com/gh/eliflores/mignonnesaurus-blog.svg?style=svg)](https://circleci.com/gh/eliflores/mignonnesaurus-blog)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/6ed84ae41b3695a8af27/test_coverage)](https://codeclimate.com/github/eliflores/mignonnesaurus-blog/test_coverage)
 [![Maintainability](https://api.codeclimate.com/v1/badges/6ed84ae41b3695a8af27/maintainability)](https://codeclimate.com/github/eliflores/mignonnesaurus-blog/maintainability)
-[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 
 - [Introduction](#Introduction)
