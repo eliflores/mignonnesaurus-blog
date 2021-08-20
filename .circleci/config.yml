@@ -8,7 +8,7 @@ jobs:
     working_directory: ~/mignonnesaurus-blog
     steps:
       - browser-tools/install-firefox:
-          version: "90.0"
+          version: "90.0.2"
       - browser-tools/install-geckodriver
       - checkout
       - restore_cache:
