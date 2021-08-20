@@ -7,7 +7,8 @@ jobs:
       - image: circleci/python:3.8.5
     working_directory: ~/mignonnesaurus-blog
     steps:
-      - browser-tools/install-firefox
+      - browser-tools/install-firefox:
+          firefox-version: "91.0"
       - browser-tools/install-geckodriver
       - checkout
       - restore_cache:
