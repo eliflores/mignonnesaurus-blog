@@ -4,12 +4,9 @@ orbs:
 jobs:
   build:
     docker:
-      - image: cimg/python:3.8.5
+      - image: cimg/python:3.8-browsers
     working_directory: ~/mignonnesaurus-blog
     steps:
-      - run:
-          name: Install PackageKit GTK+ module
-          command: sudo apt-get update && sudo apt-get -y install packagekit-gtk3-module
       - browser-tools/install-firefox
       - browser-tools/install-geckodriver
       - checkout
