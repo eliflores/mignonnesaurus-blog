@@ -7,8 +7,10 @@ jobs:
       - image: circleci/python:3.8.5
     working_directory: ~/mignonnesaurus-blog
     steps:
-      - browser-tools/install-firefox:
-          version: "89.0.2"
+      - run:
+          name: Install PackageKit GTK+ module
+          command: apt -y install packagekit-gtk3-module
+      - browser-tools/install-firefox
       - browser-tools/install-geckodriver
       - checkout
       - restore_cache:
