@@ -10,12 +10,20 @@ jobs:
       - browser-tools/install-firefox
       - browser-tools/install-geckodriver
       - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "requirements.txt" }}
+            - v1-dependencies-
       - run:
           name: Install dependencies
           command: |
             python -m venv venv
             source venv/bin/activate
             pip install -r requirements.txt
+      - save_cache:
+          paths:
+            - ./venv
+          key: v1-dependencies-{{ checksum "requirements.txt" }}
       - run:
           name: Setup Code Climate test-reporter
           command: |
