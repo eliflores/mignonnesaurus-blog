@@ -9,7 +9,7 @@ jobs:
     steps:
       - run:
           name: Install PackageKit GTK+ module
-          command: sudo apt -y install packagekit-gtk3-module
+          command: sudo apt-get update && apt-get -y install packagekit-gtk3-module
       - browser-tools/install-firefox
       - browser-tools/install-geckodriver
       - checkout
