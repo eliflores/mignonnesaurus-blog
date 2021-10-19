@@ -18,7 +18,7 @@ requests==2.26.0
 selenium==4.0.0
 six==1.16.0
 sqlparse==0.4.2
-stevedore==3.4.0
+stevedore==3.5.0
 urllib3==1.26.7
 virtualenv==20.8.1
 virtualenv-clone==0.5.7
