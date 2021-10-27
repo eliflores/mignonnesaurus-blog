@@ -1,6 +1,7 @@
 dev_setup:
-	pip install -r requirements.txt
 	brew list geckodriver || HOMEBREW_NO_AUTO_UPDATE=1 brew install geckodriver
+	pipenv shell
+	pipenv install
 
 test:
 	python manage.py test tests
