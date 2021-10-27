@@ -5,6 +5,8 @@ jobs:
   build:
     docker:
       - image: cimg/python:3.8-browsers
+        environment:
+          PIPENV_VENV_IN_PROJECT: true
     working_directory: ~/mignonnesaurus-blog
     steps:
       - browser-tools/install-firefox
@@ -13,9 +15,8 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            python -m venv venv
-            source venv/bin/activate
-            pip install -r requirements.txt
+            pip install pipenv
+            pipenv install
       - run:
           name: Setup Code Climate test-reporter
           command: |
@@ -25,9 +26,8 @@ jobs:
           name: Run tests
           command: |
             ./cc-test-reporter before-build
-            . venv/bin/activate
-            coverage run manage.py test tests -v 2
-            coverage xml
+            pipenv run coverage run manage.py test tests -v 2
+            pipenv run coverage xml
             ./cc-test-reporter after-build --debug --coverage-input-type coverage.py --exit-code $?
       - store_artifacts:
           path: htmlcov

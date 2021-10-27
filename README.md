@@ -36,17 +36,15 @@ I :yellow_heart: the [Django Girls Tutorial](https://tutorial.djangogirls.org/en
 ## Getting started
 
 ### How to run the project locally?
-0. Make sure you have [GNU Make](https://www.gnu.org/software/make/) installed on your machine.
+
+1. Make sure you have [GNU Make](https://www.gnu.org/software/make/) installed on your machine.
   * A [Makefile](Makefile) was added to the project to simplify some tasks.
 
-1. Create a virtual env
+2. The project uses [pipenv](https://github.com/pypa/pipenv) to manage the Python dependencies and facilitate the 
+   workflow when working with a virtualenv. So, please [install pipenv](https://github.com/pypa/pipenv#installation) 
+   before getting started:
 ```bash
-python -m venv venv
-```
-
-2. Active the virtual env:
-```bash
-source venv/bin/activate
+brew install pipenv
 ```
 
 3. Setup dev environment: 
