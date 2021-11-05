@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "6add79c3f7b9d5a40a821b8dbc902a607baa58f890215d7feac587b7ef3176e9"
+            "sha256": "b1c5e58038bd44a7e41d752fbfbe4510e99af99f28da6ce021109ca7eac81280"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -566,6 +566,7 @@
                 "sha256:14db1752acdd2187d99cb2ca0a1a6dfe57fc65c3281e0f20e597aac8d2a5bd90",
                 "sha256:1e3a362790edc0a365385b1ac4cc0acc429a0c0d662d829a50b6ce743ae61b5a",
                 "sha256:1e85b74cbbb3056e3656f1cc4781294df03383127a8114cbc6531e8b8367bf1e",
+                "sha256:1f6ca4a9068f5c5c57e744b4baa79f40e83e3746875cac3c45467b16326bab45",
                 "sha256:20f1ab44d8c352074e2d7ca67dc00843067788791be373e67a0911998787ce7d",
                 "sha256:24b0b6688b9f31a911f2361fe818492650795c9e5d3a1bc647acbd7440142a4f",
                 "sha256:2f62c207d1740b0bde5c4e949f857b044818f734a3d57f1d0d0edc65050532ed",
@@ -590,6 +591,7 @@
                 "sha256:cfc523edecddaef56f6740d7de1ce24a2fdf94fd5e704091856a201872e37f9f",
                 "sha256:d92272c7c16e105788efe2cfa5d680f07e34e0c29b03c1908f8636f55d5f915a",
                 "sha256:da113b70f6ec40e7d81b43d1b139b9db6a05727ab8be1ee559f3a69854a69d34",
+                "sha256:ebccf1123e7ef66efc615a68295bf6fdba875a75d5bba10a05073202598085fc",
                 "sha256:f6fac64a38f6768e7bc7b035b9e10d8a538a9fadce06b983fb3e6fa55ac5f5ce",
                 "sha256:f8559617b1fcf59a9aedba2c9838b5b6aa211ffedecabca412b92a1ff75aac1a",
                 "sha256:fbb42a541b1093385a2d8c7eec94d26d30437d0e77c1d25dae1dcc46741a385e"
@@ -824,11 +826,11 @@
         },
         "seleniumbase": {
             "hashes": [
-                "sha256:029b7854f6539087c2a44e8a6c375c8cb6c6838e2740e9816fe8713a0d9a6239",
-                "sha256:3ddb5920ffe856d7fd5fd59fa262306b72d875d3a4ba1a1306e6855e4fae1935"
+                "sha256:0efd99a1723ae9d4c64ca8e5a908f7e0ca5f8a2adb78c7e2dacef286ae5adcda",
+                "sha256:3dcc79c862c8c31c15f382e0c3264d12fa956041c3e0236bd2d63c0d15e0cb4e"
             ],
             "index": "pypi",
-            "version": "==2.1.0"
+            "version": "==2.1.2"
         },
         "setuptools-scm": {
             "hashes": [
@@ -863,11 +865,11 @@
         },
         "soupsieve": {
             "hashes": [
-                "sha256:052774848f448cf19c7e959adf5566904d525f33a3f8b6ba6f6f8f26ec7de0cc",
-                "sha256:c2c1c2d44f158cdbddab7824a9af8c4f83c76b1e23e049479aa432feb6c4c23b"
+                "sha256:617ffc4d0dfd39c66f4d1413a6e165663a34eca86be9b54f97b91756300ff6df",
+                "sha256:e4860f889dfa88774c07da0b276b70c073b6470fa1a4a8350800bb7bce3dcc76"
             ],
             "markers": "python_version >= '3.6'",
-            "version": "==2.2.1"
+            "version": "==2.3"
         },
         "sqlparse": {
             "hashes": [
