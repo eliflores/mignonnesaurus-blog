@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "836c2341ecfa2156457c4cad1a053fb28c3c7a7e0c976646cebb10f4e01c343c"
+            "sha256": "fe88eaf58b4198439134cce900a9a823546a6b82ca52c5e0e2747590134a95dc"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -49,11 +49,11 @@
         },
         "backports.entry-points-selectable": {
             "hashes": [
-                "sha256:988468260ec1c196dab6ae1149260e2f5472c9110334e5d51adcb77867361f6a",
-                "sha256:a6d9a871cde5e15b4c4a53e3d43ba890cc6861ec1332c9c2428c92f977192acc"
+                "sha256:7fceed9532a7aa2bd888654a7314f864a3c16a4e710b34a58cfc0f08114c663b",
+                "sha256:914b21a479fde881635f7af5adc7f6e38d6b274be32269070c53b698c60d5386"
             ],
             "markers": "python_version >= '2.7'",
-            "version": "==1.1.0"
+            "version": "==1.1.1"
         },
         "beautifulsoup4": {
             "hashes": [
@@ -301,11 +301,11 @@
         },
         "django-configurations": {
             "hashes": [
-                "sha256:0b93cb7042739e2d69cfc6fb81676bbd3cbb63ea19b02e8b681f4cad3a8aaf1b",
-                "sha256:9e3bcea1355ac50a4c9f854f751d214cb17e5f8adf18405a4488d0a1e8945915"
+                "sha256:65e2e9b68a699d9403663b17c367e5e31ffd3739d4ddf995e04217416876dba1",
+                "sha256:e2ca25530e184f0ee3b7f5ae69563461a93a8914493306ee0bf6d71e7d8ad1d0"
             ],
             "index": "pypi",
-            "version": "==2.2"
+            "version": "==2.3.1"
         },
         "docopt": {
             "hashes": [
