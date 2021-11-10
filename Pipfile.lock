@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "836c2341ecfa2156457c4cad1a053fb28c3c7a7e0c976646cebb10f4e01c343c"
+            "sha256": "67e68e775cb3c725e3e51a15bf740743c9e4055be92ce0857d3203034c02f385"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -49,11 +49,11 @@
         },
         "backports.entry-points-selectable": {
             "hashes": [
-                "sha256:988468260ec1c196dab6ae1149260e2f5472c9110334e5d51adcb77867361f6a",
-                "sha256:a6d9a871cde5e15b4c4a53e3d43ba890cc6861ec1332c9c2428c92f977192acc"
+                "sha256:7fceed9532a7aa2bd888654a7314f864a3c16a4e710b34a58cfc0f08114c663b",
+                "sha256:914b21a479fde881635f7af5adc7f6e38d6b274be32269070c53b698c60d5386"
             ],
             "markers": "python_version >= '2.7'",
-            "version": "==1.1.0"
+            "version": "==1.1.1"
         },
         "beautifulsoup4": {
             "hashes": [
@@ -410,11 +410,11 @@
         },
         "more-itertools": {
             "hashes": [
-                "sha256:1debcabeb1df793814859d64a81ad7cb10504c24349368ccf214c664c474f41f",
-                "sha256:56ddac45541718ba332db05f464bebfb0768110111affd27f66e0051f276fa43"
+                "sha256:0a2fd25d343c08d7e7212071820e7e7ea2f41d8fb45d6bc8a00cd6ce3b7aab88",
+                "sha256:88afff98d83d08fe5e4049b81e2b54c06ebb6b3871a600040865c7a592061cbb"
             ],
             "markers": "python_version >= '3.5'",
-            "version": "==8.10.0"
+            "version": "==8.11.0"
         },
         "nose": {
             "hashes": [
@@ -826,11 +826,11 @@
         },
         "seleniumbase": {
             "hashes": [
-                "sha256:989c974a8d2e853478a5d77d41181e62ca7dc86f923858fdca1d80e8a3f47bdb",
-                "sha256:a470da9d1de2245760b7fcf9f1cbd788092d98902a5737eec8da3d323f84c646"
+                "sha256:3e173d9634d39c4bdada170295333beaa2960aa3017704397bd4dd7efb8b7864",
+                "sha256:a326ee4923d190c4a0e5ab1ecf490dddb1339d8ad41dbb51440bf94b902b43ea"
             ],
             "index": "pypi",
-            "version": "==2.1.4"
+            "version": "==2.1.5"
         },
         "setuptools-scm": {
             "hashes": [
