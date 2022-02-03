@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "b2cf77d1e57f7abc69ca963fd07eb13ea6576c1e88be80ef22ca4eb4c71fabd6"
+            "sha256": "ece8d8609a6ef561fc65e36a35e445d9fc1a44a61a988fcb12303ba01f537a7b"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -533,11 +533,11 @@
         },
         "pip": {
             "hashes": [
-                "sha256:27b4b70c34ec35f77947f777070d8331adbb1e444842e98e7150c288dc0caea4",
-                "sha256:682eabc4716bfce606aca8dab488e9c7b58b0737e9001004eb858cdafcd8dbdd"
+                "sha256:c146f331f0805c77017c6bb9740cec4a49a0d4582d0c3cc8244b057f83eca359",
+                "sha256:f29d589df8c8ab99c060e68ad294c4a9ed896624f6368c5349d70aa581b333d0"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==22.0.2"
+            "version": "==22.0.3"
         },
         "platformdirs": {
             "hashes": [
@@ -854,19 +854,19 @@
         },
         "seleniumbase": {
             "hashes": [
-                "sha256:be633ea24e7509ba762633776f21e9ac7904ee6b3e7cecb273c49e8c26b4cf98",
-                "sha256:c40191b51df05ce92129fa1c7f196dfd3304c44252b091a2fa5b3cd926b11101"
+                "sha256:1c436fc7a425751fa2cb2641bb77f2fef8db8f67902944c703e098328f496240",
+                "sha256:a0a59869e9db3cc0346ae380060c9b05264825ea995c838c3b07c6f4e7c78ad6"
             ],
             "index": "pypi",
-            "version": "==2.4.4"
+            "version": "==2.4.6"
         },
         "setuptools": {
             "hashes": [
-                "sha256:c99207037c38984eae838c2fd986f39a9ddf4fabfe0fddd957e622d1d1dcdd05",
-                "sha256:eb83b1012ae6bf436901c2a2cee35d45b7260f31fd4b65fd1e50a9f99c11d7f8"
+                "sha256:a4dc3af29a67e7a45620aba43dde2c1af2dd6bc49726d78168f0cc6c4fb0c01b",
+                "sha256:c9097cbcdefe88a64da966a764f2d95feb1cfaff77cc304528a23cefe3359d9a"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==60.6.0"
+            "version": "==60.7.1"
         },
         "setuptools-scm": {
             "hashes": [
@@ -1006,7 +1006,7 @@
                 "sha256:895e318e5ec5e8cea9f60b473b6edb95b215e82d99556a03eb2d20c5e027efe1",
                 "sha256:c27c231e66336183c484fbfe080fa6cc954149366c15dc21db8b7290081ec7b8"
             ],
-            "markers": "python_version >= '3.6'",
+            "markers": "python_version >= '3.7'",
             "version": "==0.19.0"
         },
         "trio-websocket": {
@@ -1014,7 +1014,7 @@
                 "sha256:5b558f6e83cc20a37c3b61202476c5295d1addf57bd65543364e0337e37ed2bc",
                 "sha256:a3d34de8fac26023eee701ed1e7bf4da9a8326b61a62934ec9e53b64970fd8fe"
             ],
-            "markers": "python_version >= '3.5'",
+            "markers": "python_version >= '3.7'",
             "version": "==0.9.2"
         },
         "typer": {
