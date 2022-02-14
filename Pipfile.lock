@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "4ac849bb480f41a0da1c1707426fcf492a01899312ca78383f65eebbce71fe7f"
+            "sha256": "095e7e4fa125822d4c49cfb59d7ebd7075317ee01d5a2eb610aba146e99ee0dd"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -865,11 +865,11 @@
         },
         "setuptools": {
             "hashes": [
-                "sha256:a4dc3af29a67e7a45620aba43dde2c1af2dd6bc49726d78168f0cc6c4fb0c01b",
-                "sha256:c9097cbcdefe88a64da966a764f2d95feb1cfaff77cc304528a23cefe3359d9a"
+                "sha256:716f9d20b4c3513d1720245eb1dac009b40c9694c88e940e54b67b8b65d09493",
+                "sha256:d181db00651bce5268b8f559795053d5e8f645e4dbafac6d262b22d7e72e19eb"
             ],
             "index": "pypi",
-            "version": "==60.7.1"
+            "version": "==60.9.0"
         },
         "setuptools-scm": {
             "hashes": [
@@ -1009,7 +1009,7 @@
                 "sha256:895e318e5ec5e8cea9f60b473b6edb95b215e82d99556a03eb2d20c5e027efe1",
                 "sha256:c27c231e66336183c484fbfe080fa6cc954149366c15dc21db8b7290081ec7b8"
             ],
-            "markers": "python_version >= '3.7'",
+            "markers": "python_version >= '3.6'",
             "version": "==0.19.0"
         },
         "trio-websocket": {
@@ -1017,7 +1017,7 @@
                 "sha256:5b558f6e83cc20a37c3b61202476c5295d1addf57bd65543364e0337e37ed2bc",
                 "sha256:a3d34de8fac26023eee701ed1e7bf4da9a8326b61a62934ec9e53b64970fd8fe"
             ],
-            "markers": "python_version >= '3.7'",
+            "markers": "python_version >= '3.5'",
             "version": "==0.9.2"
         },
         "typer": {
