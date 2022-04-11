@@ -30,7 +30,7 @@ virtualenv-clone = "==0.5.7"
 virtualenvwrapper = "==4.8.4"
 whitenoise = "==6.0.0"
 seleniumbase = "==2.4.14"
-Django = "==4.0.3"
+Django = "==4.0.4"
 setuptools = "==60.10.0"
 
 [dev-packages]
