@@ -103,7 +103,12 @@ class Local(Base):
 class Dev(Base):
     DEBUG = True
 
-    DATABASES = {'default': dj_database_url.config(conn_max_age=500)}
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
     ALLOWED_HOSTS = [
         '.herokuapp.com',
