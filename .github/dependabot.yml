@@ -5,14 +5,4 @@ updates:
   schedule:
     interval: daily
   open-pull-requests-limit: 10
-  ignore:
-  - dependency-name: idna
-    versions:
-    - ">= 3.1.a, < 3.2"
-  - dependency-name: seleniumbase
-    versions:
-    - 1.56.5
-    - 1.56.7
-    - 1.57.1
-    - 1.58.1
-    - 1.58.3
+
