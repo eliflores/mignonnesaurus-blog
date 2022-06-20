@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "6efec6a16198be0c7f67cea342f719c76937887b05a67212af2bde8887ba59f9"
+            "sha256": "26a5302940b1848f78a812a4de93542d97bbf5d4c8564ea8f34d3e6e5507b482"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -138,7 +138,7 @@
                 "sha256:2857e29ff0d34db842cd7ca3230549d1a697f96ee6d3fb071cfa6c7393832597",
                 "sha256:6881edbebdb17b39b4eaaa821b438bf6eddffb4468cf344f09f89def34a8b1df"
             ],
-            "markers": "python_version >= '3.5'",
+            "markers": "python_version >= '3'",
             "version": "==2.0.12"
         },
         "click": {
@@ -843,11 +843,11 @@
         },
         "setuptools": {
             "hashes": [
-                "sha256:5a844ad6e190dccc67d6d7411d119c5152ce01f7c76be4d8a1eaa314501bba77",
-                "sha256:bf8a748ac98b09d32c9a64a995a6b25921c96cc5743c1efa82763ba80ff54e91"
+                "sha256:990a4f7861b31532871ab72331e755b5f14efbe52d336ea7f6118144dd478741",
+                "sha256:c1848f654aea2e3526d17fc3ce6aeaa5e7e24e66e645b5be2171f3f6b4e5a178"
             ],
             "index": "pypi",
-            "version": "==62.4.0"
+            "version": "==62.6.0"
         },
         "setuptools-scm": {
             "hashes": [
@@ -987,7 +987,7 @@
                 "sha256:895e318e5ec5e8cea9f60b473b6edb95b215e82d99556a03eb2d20c5e027efe1",
                 "sha256:c27c231e66336183c484fbfe080fa6cc954149366c15dc21db8b7290081ec7b8"
             ],
-            "markers": "python_version >= '3.7'",
+            "markers": "python_version >= '3.6'",
             "version": "==0.19.0"
         },
         "trio-websocket": {
@@ -995,7 +995,7 @@
                 "sha256:5b558f6e83cc20a37c3b61202476c5295d1addf57bd65543364e0337e37ed2bc",
                 "sha256:a3d34de8fac26023eee701ed1e7bf4da9a8326b61a62934ec9e53b64970fd8fe"
             ],
-            "markers": "python_version >= '3.7'",
+            "markers": "python_version >= '3.5'",
             "version": "==0.9.2"
         },
         "typer": {
