@@ -138,6 +138,22 @@ and can be run with:
 python manage.py test e2e.local
 ```
 
+#### Troubleshooting E2E Tests
+
+E2E tests by default run in _headless_ mode, this means that if you want to 
+troubleshoot via the browser and the driver doing its magic, you will need 
+to modify the test you would like to troubleshoot and change:
+
+```python
+firefox_options.headless = True
+```
+
+to 
+
+```python
+firefox_options.headless = False
+```
+
 ### On a remote machine :cloud:
 
 Remote E2E Tests - tests that run _on the cloud_ - are setup to run on [Sauce Labs](https://saucelabs.com/) :zap:.
