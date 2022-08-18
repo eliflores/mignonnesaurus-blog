@@ -2,7 +2,7 @@ class AdminLoginPage:
     USERNAME_INPUT = '#id_username'
     PASSWORD_INPUT = '#id_password'
     SUBMIT_BUTTON = 'input[type="submit"]'
-    LOGOUT_LINK = 'link=LOG OUT'
+    LOGOUT_BUTTON = '//button[text()="Log out"]'
 
     def __init__(self, driver, base_url):
         self.driver = driver
@@ -18,4 +18,4 @@ class AdminLoginPage:
         self.driver.click(self.SUBMIT_BUTTON)
 
     def logout(self):
-        self.driver.click(self.LOGOUT_LINK)
+        self.driver.driver.find_element('xpath', self.LOGOUT_BUTTON).click()
