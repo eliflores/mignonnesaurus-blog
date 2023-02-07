@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "a82febf4ae772e8b71c6e2e42e68dc54e01d885665a0389f7e0378a13e0c5366"
+            "sha256": "d8b5c941cef0bd99eeaf225ac73d0ab82273c510e0969405878b84edb86b4114"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -138,7 +138,7 @@
                 "sha256:2857e29ff0d34db842cd7ca3230549d1a697f96ee6d3fb071cfa6c7393832597",
                 "sha256:6881edbebdb17b39b4eaaa821b438bf6eddffb4468cf344f09f89def34a8b1df"
             ],
-            "markers": "python_version >= '3'",
+            "markers": "python_version >= '3.5'",
             "version": "==2.0.12"
         },
         "click": {
@@ -1013,7 +1013,7 @@
                 "sha256:895e318e5ec5e8cea9f60b473b6edb95b215e82d99556a03eb2d20c5e027efe1",
                 "sha256:c27c231e66336183c484fbfe080fa6cc954149366c15dc21db8b7290081ec7b8"
             ],
-            "markers": "python_version >= '3.6'",
+            "markers": "python_version >= '3.7'",
             "version": "==0.19.0"
         },
         "trio-websocket": {
@@ -1021,7 +1021,7 @@
                 "sha256:5b558f6e83cc20a37c3b61202476c5295d1addf57bd65543364e0337e37ed2bc",
                 "sha256:a3d34de8fac26023eee701ed1e7bf4da9a8326b61a62934ec9e53b64970fd8fe"
             ],
-            "markers": "python_version >= '3.5'",
+            "markers": "python_version >= '3.7'",
             "version": "==0.9.2"
         },
         "typer": {
@@ -1050,11 +1050,11 @@
         },
         "virtualenv": {
             "hashes": [
-                "sha256:ce3b1684d6e1a20a3e5ed36795a97dfc6af29bc3970ca8dab93e11ac6094b3c4",
-                "sha256:f8b927684efc6f1cc206c9db297a570ab9ad0e51c16fa9e45487d36d1905c058"
+                "sha256:9d61e4ec8d2c0345dab329fb825eb05579043766a4b26a2f66b28948de68c722",
+                "sha256:f262457a4d7298a6b733b920a196bf8b46c8af15bf1fd9da7142995eff15118e"
             ],
             "index": "pypi",
-            "version": "==20.17.1"
+            "version": "==20.18.0"
         },
         "virtualenv-clone": {
             "hashes": [
