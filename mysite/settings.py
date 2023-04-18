@@ -102,7 +102,11 @@ class Dev(Base):
         '.herokuapp.com',
     ]
 
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    STORAGES = {
+        'staticfiles': {
+            'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
+        },
+    }
 
     SECURE_SSL_REDIRECT = True
 
@@ -119,7 +123,11 @@ class Staging(Base):
         'mignonnesaurus-staging.herokuapp.com',
     ]
 
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    STORAGES = {
+        'staticfiles': {
+            'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
+        },
+    }
 
     SECURE_SSL_REDIRECT = True
 
@@ -137,7 +145,11 @@ class Prod(Base):
         'mignonnesaurus.herokuapp.com',
     ]
 
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    STORAGES = {
+        'staticfiles': {
+            'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
+        },
+    }
 
     SECURE_SSL_REDIRECT = True
 
