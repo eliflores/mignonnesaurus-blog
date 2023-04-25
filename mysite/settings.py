@@ -17,7 +17,7 @@ from configurations import Configuration
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-class Base(Configuration):
+class Local(Configuration):
     SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
     INSTALLED_APPS = (
@@ -73,8 +73,6 @@ class Base(Configuration):
     LOGIN_REDIRECT_URL = '/'
     ROOT_URLCONF = 'mysite.urls'
 
-
-class Local(Base):
     DEBUG = True
 
     DATABASES = {
@@ -90,68 +88,4 @@ class Local(Base):
     ]
 
     STATIC_URL = '/static/'
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-
-class Dev(Base):
-    DEBUG = True
-
-    DATABASES = {'default': dj_database_url.config(conn_max_age=500)}
-
-    ALLOWED_HOSTS = [
-        '.herokuapp.com',
-    ]
-
-    STORAGES = {
-        'staticfiles': {
-            'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
-        },
-    }
-
-    SECURE_SSL_REDIRECT = True
-
-    STATIC_URL = '/app/static/'
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-
-class Staging(Base):
-    DEBUG = False
-
-    DATABASES = {'default': dj_database_url.config(conn_max_age=500)}
-
-    ALLOWED_HOSTS = [
-        'mignonnesaurus-staging.herokuapp.com',
-    ]
-
-    STORAGES = {
-        'staticfiles': {
-            'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
-        },
-    }
-
-    SECURE_SSL_REDIRECT = True
-
-    STATIC_URL = '/app/static/'
-    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-
-class Prod(Base):
-    DEBUG = False
-
-    DATABASES = {'default': dj_database_url.config(conn_max_age=500)}
-
-    ALLOWED_HOSTS = [
-        'elifloresch.pythonanywhere.com',
-        'mignonnesaurus.herokuapp.com',
-    ]
-
-    STORAGES = {
-        'staticfiles': {
-            'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
-        },
-    }
-
-    SECURE_SSL_REDIRECT = True
-
-    STATIC_URL = '/app/static/'
     STATIC_ROOT = os.path.join(BASE_DIR, 'static')
