@@ -102,7 +102,11 @@ class Dev(Base):
         '.herokuapp.com',
     ]
 
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    STORAGES = {
+        'staticfiles': {
+            'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
+        },
+    }
 
     SECURE_SSL_REDIRECT = True
 
@@ -111,7 +115,7 @@ class Dev(Base):
 
 
 class Staging(Base):
-    DEBUG = True
+    DEBUG = False
 
     DATABASES = {'default': dj_database_url.config(conn_max_age=500)}
 
@@ -119,7 +123,11 @@ class Staging(Base):
         'mignonnesaurus-staging.herokuapp.com',
     ]
 
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    STORAGES = {
+        'staticfiles': {
+            'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
+        },
+    }
 
     SECURE_SSL_REDIRECT = True
 
@@ -128,7 +136,7 @@ class Staging(Base):
 
 
 class Prod(Base):
-    DEBUG = True
+    DEBUG = False
 
     DATABASES = {'default': dj_database_url.config(conn_max_age=500)}
 
@@ -137,7 +145,11 @@ class Prod(Base):
         'mignonnesaurus.herokuapp.com',
     ]
 
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    STORAGES = {
+        'staticfiles': {
+            'BACKEND': 'whitenoise.storage.CompressedManifestStaticFilesStorage',
+        },
+    }
 
     SECURE_SSL_REDIRECT = True
 
