@@ -22,8 +22,6 @@
     - [Pre-requirements](#Pre-requirements-1)
     - [Running E2E Tests](#Running-E2E-Tests-1)
 - [Continuous Integration](#Continuous-Integration)
-- [Deployment](#Deployment)
-  - [Review Apps](#Review-Apps)
 
 ## Introduction
 
