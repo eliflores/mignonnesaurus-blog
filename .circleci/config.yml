@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   browser-tools: circleci/browser-tools@1.2.1
 jobs:
-  build:
+  test:
     docker:
       - image: cimg/python:3.9-browsers
         environment:
@@ -31,23 +31,9 @@ jobs:
             ./cc-test-reporter after-build --debug --coverage-input-type coverage.py --exit-code $?
       - store_artifacts:
           path: htmlcov
-  deploy:
-    docker:
-      - image: buildpack-deps:trusty
-    steps:
-      - checkout
-      - run:
-          name: Deploy Master to Heroku (Staging)
-          command: |
-            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
 workflows:
   version: 2
-  build-deploy:
+  test:
     jobs:
-      - build
-      - deploy:
-          requires:
-            - build
-          filters:
-            branches:
-              only: master
+      - test
+
