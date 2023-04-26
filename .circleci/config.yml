@@ -33,12 +33,7 @@ jobs:
           path: htmlcov
 workflows:
   version: 2
-  build-deploy:
+  build:
     jobs:
       - build
-      - deploy:
-          requires:
-            - build
-          filters:
-            branches:
-              only: master
+
