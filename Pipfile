@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-certifi = "==2023.7.22"
+certifi = "==2023.11.17"
 chardet = "==4.0.0"
 coverage = "==7.3.2"
 dj-database-url = "==2.1.0"
