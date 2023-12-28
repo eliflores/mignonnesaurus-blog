@@ -6,7 +6,7 @@ name = "pypi"
 [packages]
 certifi = "==2023.11.17"
 chardet = "==4.0.0"
-coverage = "==7.3.2"
+coverage = "==7.4.0"
 dj-database-url = "==2.1.0"
 django-configurations = "==2.5"
 docopt = "==0.6.2"
