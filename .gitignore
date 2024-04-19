@@ -7,3 +7,5 @@ db.sqlite3
 htmlcov
 coverage.xml
 geckodriver.log
+
+.idea

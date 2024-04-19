@@ -34,11 +34,14 @@ I :yellow_heart: the [Django Girls Tutorial](https://tutorial.djangogirls.org/en
 
 ### How to run the project locally?
 
-1. Make sure you have [GNU Make](https://www.gnu.org/software/make/) installed on your machine.
+1. Install the version of Python the [.tool-versions](.tool-versions) file.
+  * You may want to use [asdf](https://asdf-vm.com/) for this purpose.
+
+2. Make sure you have [GNU Make](https://www.gnu.org/software/make/) installed on your machine.
   * A [Makefile](Makefile) was added to the project to simplify some tasks.
 
-2. The project uses [pipenv](https://github.com/pypa/pipenv) to manage the Python dependencies and facilitate the 
-   workflow when working with a virtualenv. So, please [install pipenv](https://github.com/pypa/pipenv#installation) 
+3. The project uses [pipenv](https://github.com/pypa/pipenv) to manage the Python dependencies and facilitate the 
+   workflow when working with a virtualenv. You'll need to [install pipenv](https://github.com/pypa/pipenv#installation) 
    before getting started:
 ```bash
 brew install pipenv
@@ -63,7 +66,7 @@ make runserver
 
 ### Test suite
 
-All the tests that are run as part of CI are in the [tests](tests) folder and you can run them locally with:
+All the tests that are run as part of CI are in the [tests](tests) folder, and you can run them locally with:
 
 ```bash
 python manage.py test tests
