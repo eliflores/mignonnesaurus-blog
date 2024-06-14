@@ -48,7 +48,7 @@ pickleshare==0.7.5
 pillow==9.0.1; python_version >= '3.7'
 pip==24.0; python_version >= '3.7'
 platformdirs==2.5.0; python_version >= '3.7'
-pluggy==1.0.0; python_version >= '3.6'
+pluggy==1.5.0; python_version >= '3.6'
 prompt-toolkit==3.0.28; python_version >= '3.6'
 psycopg2-binary==2.9.9; python_version >= '3.7'
 ptyprocess==0.7.0
