@@ -61,7 +61,7 @@ pyotp==2.6.0; python_version >= '3.5'
 pytest==8.2.2; python_version >= '3.6'
 pytest-forked==1.4.0; python_version >= '3.6'
 pytest-html==2.0.1; python_version >= '3.6'
-pytest-metadata==1.11.0; python_version >= '3.6'
+pytest-metadata==3.1.1; python_version >= '3.6'
 pytest-ordering==0.6
 pytest-rerunfailures==10.2; python_version >= '3.6'
 pytest-xdist==2.5.0; python_version >= '3.6'
