@@ -42,7 +42,7 @@ packaging==24.0; python_version >= '3.7'
 parameterized==0.8.1
 parso==0.8.3; python_version >= '3.6'
 pbr==6.0.0; python_version >= '2.6'
-pdfminer.six==20211012; python_version >= '3.6'
+pdfminer.six==20231228; python_version >= '3.6'
 pexpect==4.9.0; sys_platform != 'win32'
 pickleshare==0.7.5
 pillow==9.0.1; python_version >= '3.7'
