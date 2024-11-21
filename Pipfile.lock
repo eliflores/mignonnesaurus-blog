@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "67126d1b88214d1118270d3e1b7b241d4f74f31e4d4575d2069e8ba9b8b1159e"
+            "sha256": "5687bd961070c354b9a1656a41ff4f7a2d92cfa5f271c716874c54e38b69be3e"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -984,12 +984,12 @@
         },
         "stevedore": {
             "hashes": [
-                "sha256:1efd34ca08f474dad08d9b19e934a22c68bb6fe416926479ba29e5013bcc8f78",
-                "sha256:9a64265f4060312828151c204efbe9b7a9852a0d9228756344dbc7e4023e375a"
+                "sha256:79e92235ecb828fe952b6b8b0c6c87863248631922c8e8e0fa5b17b232c4514d",
+                "sha256:b0be3c4748b3ea7b854b265dcb4caa891015e442416422be16f8b31756107857"
             ],
             "index": "pypi",
-            "markers": "python_version >= '3.8'",
-            "version": "==5.3.0"
+            "markers": "python_version >= '3.9'",
+            "version": "==5.4.0"
         },
         "tabulate": {
             "hashes": [
