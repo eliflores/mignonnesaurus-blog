@@ -31,7 +31,7 @@ virtualenvwrapper = "==6.1.1"
 whitenoise = "==6.8.2"
 seleniumbase = "==2.4.14"
 Django = "==4.2.7"
-setuptools = "==75.7.0"
+setuptools = "==75.8.0"
 
 [dev-packages]
 
