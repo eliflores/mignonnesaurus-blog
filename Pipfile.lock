@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "059de57525d3dd08e9c0deaf6d8f80cbfa9343976cea62debe7363d947a9ce69"
+            "sha256": "398c6aef6273d4084102f6d1f3f1062e24f67cee9e58dc227d3a0001a306169d"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -287,11 +287,11 @@
         },
         "dj-database-url": {
             "hashes": [
-                "sha256:ae52e8e634186b57e5a45e445da5dc407a819c2ceed8a53d1fac004cc5288787",
-                "sha256:bb0d414ba0ac5cd62773ec7f86f8cc378a9dbb00a80884c2fc08cc570452521e"
+                "sha256:43950018e1eeea486bf11136384aec0fe55b29fe6fd8a44553231b85661d9383",
+                "sha256:8994961efb888fc6bf8c41550870c91f6f7691ca751888ebaa71442b7f84eff8"
             ],
             "index": "pypi",
-            "version": "==2.3.0"
+            "version": "==3.0.1"
         },
         "django": {
             "hashes": [
@@ -445,7 +445,7 @@
                 "sha256:29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484",
                 "sha256:d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f"
             ],
-            "markers": "python_version >= '3.6'",
+            "markers": "python_version >= '3.8'",
             "version": "==25.0"
         },
         "parameterized": {
@@ -1121,7 +1121,7 @@
                 "sha256:895e318e5ec5e8cea9f60b473b6edb95b215e82d99556a03eb2d20c5e027efe1",
                 "sha256:c27c231e66336183c484fbfe080fa6cc954149366c15dc21db8b7290081ec7b8"
             ],
-            "markers": "python_version >= '3.7'",
+            "markers": "python_version >= '3.6'",
             "version": "==0.19.0"
         },
         "trio-websocket": {
@@ -1129,7 +1129,7 @@
                 "sha256:5b558f6e83cc20a37c3b61202476c5295d1addf57bd65543364e0337e37ed2bc",
                 "sha256:a3d34de8fac26023eee701ed1e7bf4da9a8326b61a62934ec9e53b64970fd8fe"
             ],
-            "markers": "python_version >= '3.7'",
+            "markers": "python_version >= '3.5'",
             "version": "==0.9.2"
         },
         "typer": {
