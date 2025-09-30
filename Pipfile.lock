@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "8e9dbb6ecf81ce5618bda0888ec790dff5092fcef4059775313da161a8fb9762"
+            "sha256": "a230c00999cea97943d02375f78d2721d8b5c9b4488dec1c732f3ae8ebb49d1d"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -140,7 +140,7 @@
                 "sha256:2857e29ff0d34db842cd7ca3230549d1a697f96ee6d3fb071cfa6c7393832597",
                 "sha256:6881edbebdb17b39b4eaaa821b438bf6eddffb4468cf344f09f89def34a8b1df"
             ],
-            "markers": "python_version >= '3.5'",
+            "markers": "python_version >= '3'",
             "version": "==2.0.12"
         },
         "click": {
@@ -465,12 +465,12 @@
         },
         "pbr": {
             "hashes": [
-                "sha256:38d4daea5d9fa63b3f626131b9d34947fd0c8be9b05a29276870580050a25a76",
-                "sha256:93ea72ce6989eb2eed99d0f75721474f69ad88128afdef5ac377eb797c4bf76b"
+                "sha256:32df5156fbeccb6f8a858d1ebc4e465dcf47d6cc7a4895d5df9aa951c712fc35",
+                "sha256:3ecbcb11d2b8551588ec816b3756b1eb4394186c3b689b17e04850dfc20f7e57"
             ],
             "index": "pypi",
             "markers": "python_version >= '2.6'",
-            "version": "==6.1.1"
+            "version": "==7.0.1"
         },
         "pdfminer.six": {
             "hashes": [
