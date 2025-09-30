@@ -1,8 +1,8 @@
 # Mignonnesaurus Blog
 
 [![CircleCI](https://circleci.com/gh/eliflores/mignonnesaurus-blog.svg?style=svg)](https://circleci.com/gh/eliflores/mignonnesaurus-blog)
-[![Code Coverage](https://qlty.sh/gh/eliflores/projects/mignonnesaurus-blog/coverage.svg)](https://qlty.sh/gh/eliflores/projects/mignonnesaurus-blog)
-[![Maintainability](https://qlty.sh/gh/eliflores/projects/mignonnesaurus-blog/maintainability.svg)](https://qlty.sh/gh/eliflores/projects/mignonnesaurus-blog)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/6ed84ae41b3695a8af27/test_coverage)](https://codeclimate.com/github/eliflores/mignonnesaurus-blog/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/6ed84ae41b3695a8af27/maintainability)](https://codeclimate.com/github/eliflores/mignonnesaurus-blog/maintainability)
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 
