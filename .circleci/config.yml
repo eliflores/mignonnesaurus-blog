@@ -5,7 +5,7 @@ orbs:
 jobs:
   test:
     docker:
-      - image: cimg/python:3.12.11-browsers
+      - image: cimg/python:3.14.2-browsers
         environment:
           PIPENV_VENV_IN_PROJECT: true
     working_directory: ~/mignonnesaurus-blog
