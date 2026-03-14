@@ -11,3 +11,6 @@ geckodriver.log
 .idea
 
 .env
+
+downloaded_files
+latest_logs
