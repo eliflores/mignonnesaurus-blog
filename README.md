@@ -30,7 +30,7 @@
 I :yellow_heart: the [Django Girls Tutorial](https://tutorial.djangogirls.org/en/). After [following it](https://github.com/mignonnesaurus/my-first-blog), I continued the fun by:
 * Adding Tests 
 * Setting up Continuous Integration with [circleci](https://circleci.com/)
-* Setting up [Code Climate](https://codeclimate.com/)
+* Setting up [Qlty](https://qlty.sh/)
 
 ## Getting started
 
@@ -44,22 +44,19 @@ I :yellow_heart: the [Django Girls Tutorial](https://tutorial.djangogirls.org/en
 
 3. The project uses [pipenv](https://github.com/pypa/pipenv) to manage the Python dependencies and facilitate the 
    workflow when working with a virtualenv. You'll need to [install pipenv](https://github.com/pypa/pipenv#installation) 
-   before getting started:
-```bash
-brew install pipenv
-```
+   before getting started.
 
-3. Setup dev environment: 
+4. Setup dev environment: 
 ```bash
 make dev_setup
 ```
 
-4. Make sure things are healthy by running the tests: 
+5. Make sure things are healthy by running the tests: 
 ```bash
 make test
 ```
 
-5. Start the server:
+6. Start the server:
 ```bash
 make runserver
 ```
