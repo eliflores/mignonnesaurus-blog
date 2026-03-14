@@ -1,22 +1,19 @@
 from django.contrib.auth import get_user_model
 from django.test import LiveServerTestCase
-from selenium.webdriver.firefox import options
-from selenium.webdriver.firefox.webdriver import WebDriver
 
 from driver import SeleniumDriver
 from page import AdminLoginPage
 from page import HomePage
 from page import NewPostPage
 from page import PostPage
+from tests.webdriver import create_firefox_webdriver
 
 
 class PostDeleteTestCase(LiveServerTestCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        firefox_options = options.Options()
-        firefox_options.headless = True
-        cls.webdriver = WebDriver(options=firefox_options)
+        cls.webdriver = create_firefox_webdriver()
 
     @classmethod
     def tearDownClass(cls):

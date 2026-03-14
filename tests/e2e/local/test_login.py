@@ -1,14 +1,15 @@
 from django.test import LiveServerTestCase
 from django.contrib.auth import get_user_model
 from selenium.webdriver.common.by import By
-from selenium.webdriver.firefox.webdriver import WebDriver
+
+from tests.webdriver import create_firefox_webdriver
 
 
 class LoginTestCase(LiveServerTestCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.selenium = WebDriver()
+        cls.selenium = create_firefox_webdriver(headless=False)
         cls.selenium.implicitly_wait(10)
 
     @classmethod
@@ -32,3 +33,4 @@ class LoginTestCase(LiveServerTestCase):
         self.selenium.find_element(By.XPATH, '//*[contains(text(), "Site administration")]')
 
         self.assertTrue(self.selenium.title.startswith('Site administration'))
+

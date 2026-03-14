@@ -1,6 +1,7 @@
 import os
 
 from seleniumbase import BaseCase
+from seleniumbase.core import browser_launcher
 
 from driver import SeleniumBaseDriver
 from page import AdminLoginPage
@@ -8,13 +9,26 @@ from page import HomePage
 from page import NewCommentPage
 from page import NewPostPage
 from page import PostPage
+from tests.webdriver import get_firefox_binary_or_raise
 
 MY_BLOG_USERNAME = os.getenv('MY_BLOG_USERNAME')
 MY_BLOG_PASSWORD = os.getenv('MY_BLOG_PASSWORD')
 
+_original_set_firefox_options = getattr(browser_launcher, "_set_firefox_options")
+
+
+def _patched_set_firefox_options(*args, **kwargs):
+    options = _original_set_firefox_options(*args, **kwargs)
+    options.binary_location = get_firefox_binary_or_raise()
+    return options
+
+
+browser_launcher._set_firefox_options = _patched_set_firefox_options
+
 
 class BlogDemo(BaseCase):
     def setUp(self, masterqa_mode=False):
+
         super().setUp()
         self.page_driver = SeleniumBaseDriver(self)
 
@@ -57,3 +71,4 @@ class BlogDemo(BaseCase):
         admin_login_page = AdminLoginPage(self.page_driver,  self.start_page)
         admin_login_page.load()
         admin_login_page.login(MY_BLOG_USERNAME, MY_BLOG_PASSWORD)
+

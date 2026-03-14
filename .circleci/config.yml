@@ -34,7 +34,7 @@ jobs:
           name: Run tests
           command: |
             set -euo pipefail
-            pipenv run coverage run manage.py test tests -v 2
+            pipenv run coverage run manage.py test tests.forms tests.models tests.views tests.functional -v 2
             pipenv run coverage xml
       - qlty-orb/coverage_publish:
           files: coverage.xml
