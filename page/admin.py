@@ -2,7 +2,7 @@ class AdminLoginPage:
     USERNAME_INPUT = '#id_username'
     PASSWORD_INPUT = '#id_password'
     SUBMIT_BUTTON = 'input[type="submit"]'
-    LOGOUT_BUTTON = '//button[text()="Log out"]'
+    LOGOUT_BUTTON = "//button[normalize-space()='Log out']"
 
     def __init__(self, driver, base_url):
         self.driver = driver

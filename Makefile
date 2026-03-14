@@ -4,16 +4,16 @@ dev_setup:
 	pipenv install
 
 test:
-	python manage.py test tests
+	python manage.py test tests.forms tests.models tests.views tests.functional
 
 test_e2e:
-	python manage.py test e2e.local
+	python manage.py test tests.e2e.local
 
 migrate:
 	python manage.py migrate
 
 runserver:
-	python manage.py runserver localhost:8000
+	python manage.py runserver localhost:8081
 
 rundemo:
 	./demo.sh

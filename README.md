@@ -17,11 +17,12 @@
     - [Coverage report](#Coverage-report)
   - [E2E Tests](#E2E-Tests)
   - [On a local machine :computer:](#On-a-local-machine-computer)
-    - [Pre-requirements](#Pre-requirements)
     - [Running E2E Tests](#Running-E2E-Tests)
+    - [Troubleshooting E2E Tests](#Troubleshooting-E2E-Tests)
   - [On a remote machine :cloud:](#On-a-remote-machine-cloud)
-    - [Pre-requirements](#Pre-requirements-1)
+    - [Pre-requirements](#Pre-requirements)
     - [Running E2E Tests](#Running-E2E-Tests-1)
+  - [Demos](#Demos)
 - [Continuous Integration](#Continuous-Integration)
 
 ## Introduction
@@ -70,7 +71,7 @@ make runserver
 All the tests that are run as part of CI are in the [tests](tests) folder, and you can run them locally with:
 
 ```bash
-python manage.py test tests
+python manage.py test tests.forms tests.models tests.views tests.functional
 ```
 
 ℹ️ Additionally, you can run: `make test`
@@ -87,10 +88,10 @@ You can pass the module or test case:
 python manage.py test <module_pattern> 
 ```
 
-For example, to run all the tests in the `test_models` module:
+For example, to run all the tests in the `models` module:
 
 ```bash
-python manage.py test tests.test_models
+python manage.py test tests.models
 ```
 
 And you can also use the `--pattern` or `-p` argument. For example:
@@ -109,13 +110,13 @@ You can get more details about the test execution by passing the argument `--ver
 
 For example, to pass verbosity of 2: 
 ```bash
-python manage.py test tests -v 2
+python manage.py test tests.forms tests.models tests.views tests.functional -v 2
 ```
 
 ### Code coverage
 
 ```bash
-coverage run manage.py test tests
+coverage run manage.py test tests.forms tests.models tests.views tests.functional
 ```
 
 #### Coverage report
@@ -132,27 +133,20 @@ coverage html -d coverage-report
 
 #### Running E2E Tests 
 
-E2E Tests that do not run in headless mode are currently run separately from the main [test suite](#how-to-run-tests) 
+E2E Tests that open a visible browser are currently run separately from the main [test suite](#how-to-run-tests) 
 and can be run with:
 
 ```bash
-python manage.py test e2e.local
+make test_e2e
 ```
 
 #### Troubleshooting E2E Tests
 
-E2E tests by default run in _headless_ mode, this means that if you want to 
-troubleshoot via the browser and the driver doing its magic, you will need 
-to modify the test you would like to troubleshoot and change:
+Local E2E tests use the shared Firefox WebDriver factory in `tests/webdriver.py`.
+If Firefox is installed in a non-standard path, set `FIREFOX_BINARY` before running the tests.
 
-```python
-firefox_options.headless = True
-```
-
-to 
-
-```python
-firefox_options.headless = False
+```bash
+export FIREFOX_BINARY=/path/to/firefox
 ```
 
 ### On a remote machine :cloud:
@@ -168,7 +162,7 @@ Remote E2E Tests - tests that run _on the cloud_ - are setup to run on [Sauce La
 Tests that run on the cloud can be run with:
 
 ```bash
-python manage.py test e2e.remote
+python manage.py test tests.e2e.remote
 ```
 
 ### Demos
@@ -176,14 +170,17 @@ python manage.py test e2e.remote
 A visual demo of the blog, implemented with [SeleniumBase](https://pypi.org/project/seleniumbase/) can be run with:
 
 ```bash
-sh demo.sh
+make rundemo
 ```
 
-ℹ️ Make sure that your development server is already started, before running the demo.
+ℹ️ The development server needs to already be running and a superuser needs to also exist with credentials that need to
+be exposed as environment variables: 
 
-#### Pre-requirements
+```bash
+export MY_BLOG_USERNAME=myusername
+export MY_BLOG_PASSWORD=mypassword
+```
 
-* Install [geckodriver](https://github.com/mozilla/geckodriver) - The [Web Driver](https://developer.mozilla.org/en-US/docs/Web/WebDriver) for Firefox.
 
 ## Continuous Integration
 

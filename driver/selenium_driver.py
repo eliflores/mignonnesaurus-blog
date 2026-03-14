@@ -24,7 +24,7 @@ class SeleniumDriver(Driver):
         self.driver.maximize_window()
 
     def element_with_text(self, text):
-        return self.driver.find_element_by_xpath("//*[contains(text(), '" + text + "')]")
+        return self.driver.find_element(by=By.XPATH, value="//*[contains(text(), '" + text + "')]")
 
     @staticmethod
     def __is_link_text_selector(selector):
