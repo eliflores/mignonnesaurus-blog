@@ -13,15 +13,27 @@ jobs:
       - browser-tools/install-firefox
       - browser-tools/install-geckodriver
       - checkout
+      - restore_cache:
+          keys:
+            - v1-pipenv-3.14.2-{{ checksum "Pipfile.lock" }}
+            - v1-pipenv-3.14.2-
       - run:
           name: Install dependencies
           command: |
-            pip install pipenv
-            pipenv install
+            set -euo pipefail
+            python -m pip install --upgrade pip
+            python -m pip install pipenv
+            pipenv sync --dev --deploy
+      - save_cache:
+          key: v1-pipenv-3.14.2-{{ checksum "Pipfile.lock" }}
+          paths:
+            - .venv
+            - ~/.cache/pip
 
       - run:
           name: Run tests
           command: |
+            set -euo pipefail
             pipenv run coverage run manage.py test tests -v 2
             pipenv run coverage xml
       - qlty-orb/coverage_publish:
