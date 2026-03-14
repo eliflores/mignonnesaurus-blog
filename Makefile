@@ -9,6 +9,9 @@ test:
 test_e2e:
 	python manage.py test tests.e2e.local
 
+test_coverage:
+	coverage run manage.py test tests.forms tests.models tests.views tests.functional
+
 migrate:
 	python manage.py migrate
 

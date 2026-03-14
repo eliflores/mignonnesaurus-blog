@@ -6,35 +6,24 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 
-
-- [Introduction](#Introduction)
-- [How to run the project locally?](#How-to-run-the-project-locally)
-- [How to run tests?](#How-to-run-tests)
-  - [Test suite](#Test-suite)
-  - [Single test case(s)](#Single-test-cases)
-  - [Modify the verbosity level](#Modify-the-verbosity-level)
-  - [Code coverage](#Code-coverage)
-    - [Coverage report](#Coverage-report)
-  - [E2E Tests](#E2E-Tests)
-  - [On a local machine :computer:](#On-a-local-machine-computer)
-    - [Running E2E Tests](#Running-E2E-Tests)
-    - [Troubleshooting E2E Tests](#Troubleshooting-E2E-Tests)
-  - [On a remote machine :cloud:](#On-a-remote-machine-cloud)
-    - [Pre-requirements](#Pre-requirements)
-    - [Running E2E Tests](#Running-E2E-Tests-1)
-  - [Demos](#Demos)
-- [Continuous Integration](#Continuous-Integration)
-
-## Introduction
-
 I :yellow_heart: the [Django Girls Tutorial](https://tutorial.djangogirls.org/en/). After [following it](https://github.com/mignonnesaurus/my-first-blog), I continued the fun by:
 * Adding Tests 
 * Setting up Continuous Integration with [circleci](https://circleci.com/)
 * Setting up [Qlty](https://qlty.sh/)
 
-## Getting started
+## Table of Contents
 
-### How to run the project locally?
+- [How to run the project locally?](#how-to-run-the-project-locally)
+- [Testing](#testing)
+  - [Running a single test](#running-a-single-test)
+  - [Modify the verbosity level](#modify-the-verbosity-level)
+  - [Code coverage](#code-coverage)
+  - [Coverage report](#coverage-report)
+  - [E2E Tests](#e2e-tests)
+    - [Troubleshooting E2E Tests](#troubleshooting-e2e-tests)
+  - [Demos](#demos)
+
+## How to run the project locally?
 
 1. Install the version of Python the [.tool-versions](.tool-versions) file.
   * You may want to use [asdf](https://asdf-vm.com/) for this purpose.
@@ -61,23 +50,21 @@ make test
 make runserver
 ```
 
-## How to run tests?
+## Testing
 
-### Test suite
+The tests that are run as part of CI are: 
+- `tests.forms`
+- `tests.models`
+- `tests.views`
+- `tests.functional`: these are run as E2E tests with Selenium and Firefox in headless mode.
 
-All the tests that are run as part of CI are in the [tests](tests) folder, and you can run them locally with:
+You can run all of these tests with: `make test` or with the following command:
 
 ```bash
 python manage.py test tests.forms tests.models tests.views tests.functional
 ```
 
-ℹ️ Additionally, you can run: `make test`
-
-The execution includes _E2E_ Functional Tests that run on Firefox in headless mode. 
-
-_E2E_ / _UI_ tests that do not run in headless mode, can be run separately, see the [E2E Tests](#e2e-tests) section.
-
-### Single test case(s)
+### Running a single test
 
 You can pass the module or test case:
 
@@ -101,37 +88,31 @@ python manage.py test --pattern="*_forms.py"
 python manage.py test -p "*_forms.py"
 ```
 
-### Modify the verbosity level 
+### Modify the verbosity level
 
 You can get more details about the test execution by passing the argument `--verbosity` or `-v`. For the value you can choose from: `0, 1, 2, 3`.
 
 For example, to pass verbosity of 2: 
 ```bash
-python manage.py test tests.forms tests.models tests.views tests.functional -v 2
+python manage.py test tests.functional -v 2
 ```
 
 ### Code coverage
 
 ```bash
-coverage run manage.py test tests.forms tests.models tests.views tests.functional
+make test_coverage
 ```
 
-#### Coverage report
+### Coverage report
 
 ```bash
 coverage html -d coverage-report
 ```
 
-### E2E Tests 
+### E2E Tests
 
-:mag_right: It is also possible to run a single E2E test by using the options described [here](#single-test-cases).
-
-### On a local machine :computer:
-
-#### Running E2E Tests 
-
-E2E Tests that open a visible browser are currently run separately from the main [test suite](#how-to-run-tests) 
-and can be run with:
+E2E Tests that open a visible browser are currently run separately from the rest of the tests. To run them, make sure 
+you have Firefox installed and run:
 
 ```bash
 make test_e2e
@@ -139,28 +120,13 @@ make test_e2e
 
 #### Troubleshooting E2E Tests
 
-Local E2E tests use the shared Firefox WebDriver factory in `tests/webdriver.py`.
+E2E tests use the shared Firefox WebDriver factory in `tests/webdriver.py`.
 If Firefox is installed in a non-standard path, set `FIREFOX_BINARY` before running the tests.
 
 ```bash
 export FIREFOX_BINARY=/path/to/firefox
 ```
 
-### On a remote machine :cloud:
-
-Remote E2E Tests - tests that run _on the cloud_ - are setup to run on [Sauce Labs](https://saucelabs.com/) :zap:.
-
-#### Pre-requirements
-
-* A _username_ and _API Key_ is needed to run the tests on the Sauce Labs Testing Cloud. 
-
-#### Running E2E Tests 
-
-Tests that run on the cloud can be run with:
-
-```bash
-python manage.py test tests.e2e.remote
-```
 
 ### Demos
 
@@ -177,13 +143,6 @@ be exposed as environment variables:
 export MY_BLOG_USERNAME=myusername
 export MY_BLOG_PASSWORD=mypassword
 ```
-
-
-## Continuous Integration
-
-Continuous Integration (CI) is managed with the help of [CircleCI](https://app.circleci.com/pipelines/github/eliflores/mignonnesaurus-blog).
-
-Every time a PR is opened all tests inside [tests](tests) are run. Passing tests are required to merge a PR to master.
 
 ---
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
