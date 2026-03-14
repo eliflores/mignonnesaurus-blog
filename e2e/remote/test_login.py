@@ -2,6 +2,7 @@ import os
 
 from django.test import TestCase
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 sauce_username = os.environ["SAUCE_USERNAME"]
 sauce_access_key = os.environ["SAUCE_ACCESS_KEY"]
@@ -35,17 +36,20 @@ class LoginTestCase(TestCase):
         self.driver = webdriver.Remote(command_executor=remote_url, desired_capabilities=firefox_opts)
 
     def tearDown(self):
-        self.driver.find_element_by_xpath("//a[@href='/admin/logout/']").click()
+        logout_buttons = self.driver.find_elements(By.XPATH, "//button[normalize-space()='Log out']")
+        if logout_buttons:
+            logout_buttons[0].click()
+
         self.driver.quit()
 
     def test_admin_can_login(self):
         self.driver.get('%s%s' % ('https://mignonnesaurus-staging.herokuapp.com', '/admin/'))
-        username_input = self.driver.find_element_by_name('username')
+        username_input = self.driver.find_element(By.NAME, 'username')
         username_input.send_keys(mignonnesaurus_blog_username)
-        password_input = self.driver.find_element_by_name('password')
+        password_input = self.driver.find_element(By.NAME, 'password')
         password_input.send_keys(mignonnesaurus_blog_password)
-        self.driver.find_element_by_xpath('//input[@value="Log in"]').click()
-        self.driver.find_element_by_xpath('//*[contains(text(), "Site administration")]')
+        self.driver.find_element(By.XPATH, '//input[@value="Log in"]').click()
+        self.driver.find_element(By.XPATH, '//*[contains(text(), "Site administration")]')
 
         if self.driver.title.startswith('Site administration'):
             self.driver.execute_script('sauce:job-result=passed')

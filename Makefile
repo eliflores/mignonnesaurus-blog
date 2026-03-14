@@ -13,7 +13,7 @@ migrate:
 	python manage.py migrate
 
 runserver:
-	python manage.py runserver localhost:8000
+	python manage.py runserver localhost:8081
 
 rundemo:
 	./demo.sh

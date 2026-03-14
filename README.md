@@ -136,7 +136,7 @@ E2E Tests that do not run in headless mode are currently run separately from the
 and can be run with:
 
 ```bash
-python manage.py test e2e.local
+make test_e2e
 ```
 
 #### Troubleshooting E2E Tests
@@ -176,10 +176,16 @@ python manage.py test e2e.remote
 A visual demo of the blog, implemented with [SeleniumBase](https://pypi.org/project/seleniumbase/) can be run with:
 
 ```bash
-sh demo.sh
+make rundemo
 ```
 
-ℹ️ Make sure that your development server is already started, before running the demo.
+ℹ️ The development server needs to already be running and a superuser needs to also exist with credentials that need to
+be exposed as environment variables: 
+
+```bashbash
+export MY_BLOG_USERNAME=myusername
+export MY_BLOG_PASSWORD=mypassword
+```
 
 #### Pre-requirements
 
