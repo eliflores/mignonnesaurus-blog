@@ -9,3 +9,5 @@ coverage.xml
 geckodriver.log
 
 .idea
+
+.env
