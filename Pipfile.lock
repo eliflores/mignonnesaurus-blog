@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "b3cca064e918cf109da7354b6334c5f2c300b5de9e833a12f607182c79578211"
+            "sha256": "4c71738d72c1a3f38100ab5da16f76ce88e30b12ee9861c9e1a5d7d8e1286c8f"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -34,11 +34,11 @@
         },
         "attrs": {
             "hashes": [
-                "sha256:16d5969b87f0859ef33a48b35d55ac1be6e42ae49d5e853b597db70c35c57e11",
-                "sha256:adcf7e2a1fb3b36ac48d97835bb6d8ade15b8dcce26aba8bf1d14847b57a3373"
+                "sha256:c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309",
+                "sha256:d03ceb89cb322a8fd706d4fb91940737b6642aa36998fe130a9bc96c985eff32"
             ],
             "markers": "python_version >= '3.9'",
-            "version": "==25.4.0"
+            "version": "==26.1.0"
         },
         "beautifulsoup4": {
             "hashes": [
@@ -622,11 +622,11 @@
         },
         "mycdp": {
             "hashes": [
-                "sha256:2cdc408c1b81f9814eb897b42535b21bdefd31f6d185c609ccbbe25d8050fa36",
-                "sha256:9e7f5885a85de44878f6fea452a0f2799867977e592622a3bb0691405b0dbffb"
+                "sha256:0861fd85949eafd1ec794ebe58b54515c571544c983affbbc74249119ff94d21",
+                "sha256:49aa0f8cfbc608b157b3ad35999a74e32cddc674d7f0e0bbe402cdcef7ce69d6"
             ],
             "markers": "python_version >= '3.8'",
-            "version": "==1.3.6"
+            "version": "==1.3.7"
         },
         "nest-asyncio": {
             "hashes": [
@@ -1105,12 +1105,12 @@
         },
         "seleniumbase": {
             "hashes": [
-                "sha256:26e3da0ba0d11851985cd1976f5ff4ea68043f263ea509e9c0883d2eca659e76",
-                "sha256:49ac8df4689747fbffcb0a9197487666d1bf095dab016c4520b13223b9e4a0b0"
+                "sha256:44aec254cc3dee4b89a2e78129c1398ae9dca5d9af5260f4cdca5ea597b8cd74",
+                "sha256:eaa22754390690289a588602cdbc11cd40d4c3167b64fd5bb89b3546cee9b684"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.9'",
-            "version": "==4.47.4"
+            "version": "==4.47.5"
         },
         "setuptools": {
             "hashes": [
